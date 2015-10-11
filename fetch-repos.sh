@@ -1,13 +1,5 @@
 #!/bin/bash
 #
-mkdir ROBOT
-cd ROBOT
-git init
-git remote add origin https://github.com/dreamshader/Robot
-git pull origin master
-git config --global user.email "dreamshader@gmx.de"
-git config --global user.name "dreamshader"
-cd ..
 #
 mkdir ARDUINO
 cd ARDUINO
