@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+
+<table>
+<tr>
+	<td>
+		<img src="http://pi-robot:9000/?action=stream" alt="">
+	</td>
+	<td>
+		<form action="http://pi-robot/cgi-bin/run.cgi" method="get" enctype="text/plain" target="_top">
+		<input type="submit" name="Direction" value="up">
+		<input type="submit" name="Direction" value="left">
+		<input type="submit" name="Direction" value="right">
+		<input type="submit" name="Direction" value="down">
+		</form>	
+	</td>
+</tr>
+<tr>
+	<td></td>
+</tr>
+</table>
+</body>
+</html>

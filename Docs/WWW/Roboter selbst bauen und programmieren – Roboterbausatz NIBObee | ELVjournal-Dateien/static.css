@@ -1,0 +1,185 @@
+.m_left {
+ float: left;
+}
+
+.m_right {
+ float: right;
+}
+
+.m_clear-all, .m_clear-both {
+ clear: both;
+ height: 0 !important;
+ margin: 0 !important;
+ padding: 0 !important;
+}
+
+.m_bold {
+ font-weight: bold;
+}
+
+.m_content label {
+ display: block;
+ float: left;
+ height: 30px;
+ line-height: 20px;
+ width: 125px;
+}
+
+.inputDay, .inputMonth, .inputYear {
+ float: left;
+}
+
+label.dateSeparator {
+ width: 5px;
+}
+
+.m_center {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.m_pic_left {
+ float: left;
+ margin-right: 5px;
+}
+
+.m_text_left {
+ text-align:left;
+ vertical-align:top;
+}
+
+.m_bottom_margin {
+ display: block;
+ margin-bottom: 10px;
+}
+
+div.m_grayborder {
+ border: 1px solid #BABABA;
+ margin-bottom: 16px;
+}
+
+div.m_headline {
+ font-family: Tahoma,Arial,Verdana;
+ font-size: 8pt;
+ font-weight: bold;
+ color: #555659;
+ letter-spacing: 0em;
+ border-left: 1px solid #FFFFFF;
+ border-top: 1px solid #FFFFFF;
+ border-bottom: 1px solid #CFCFCF !important; 
+ background-color: #F0F1F3; 
+ padding: 5px 10px !important; 
+}
+
+div.m_content {
+ font-family: Verdana;
+ font-size: 8pt;
+ color: #222222;
+ background-color: #FFFFFF;
+ padding: 10px;
+}
+
+div.m_content_gray {
+ font-family: Verdana;
+ font-size: 8pt;
+ color: #222222;
+ border-left: 1px solid #FFFFFF;
+ border-right: 1px solid #FFFFFF;
+ border-top: 1px solid #FFFFFF;
+ background-color: #F0EFEF;
+ padding: 10px;
+}
+
+div.m_content_gray2 {
+ font-family: Verdana;
+ font-size: 8pt;
+ color: #222222;
+ border-left: 1px solid #FFFFFF;
+ border-right: 1px solid #FFFFFF;
+ border-top: 1px solid #FFFFFF;
+ background-color: #f6f6f6;
+ padding: 10px;
+}
+
+div.m_content_yellow {
+ font-family: Verdana;
+ font-size: 8pt;
+ color: #222222;
+ border-left: 1px solid #FFFFFF;
+ border-right: 1px solid #FFFFFF;
+ border-top: 1px solid #FFFFFF;
+ background-color: #ffff99;
+ padding: 10px;
+}
+
+div.m_cell_left {
+ font-family: Verdana;
+ font-size: 8pt;
+ color: #222222;
+ margin-right:10%;
+ float:left;
+}
+
+div.m_cell_right {
+ font-family: Verdana;
+ font-size: 8pt;
+ color: #222222;
+ float:left;
+}
+
+div.m_cell_center {
+ font-family: Verdana;
+ font-size: 8pt;
+ color: #222222;
+ text-align: center;
+ clear:left;
+}
+
+div.m_newsletter_head {
+ background-image: url(https://www.elv.de/images/newsletter/newsletter_verpasst_700.jpg);
+ width: 700px;
+ height: 280px;
+ font-family: Arial,Helvetica,sans-serif;
+ font-size: 9pt;
+ font-style: normal;
+ color: #000000;
+ margin-bottom: 16px;
+}
+
+div.m_newsletter_head_text {
+ margin-left: 210px;
+ margin-top: 160px;
+ position: absolute;
+}
+
+a.bgImageLink {
+ 'background: none;
+ margin: 10px;
+ cursor: pointer;
+ display:inline-block;
+ text-decoration: none;
+}
+
+span.bgImageLink {
+ background-image: url('http://www.elv.de/cmspic.aspx?Datensatz=406&Type=Webbild');
+ background-position: center right;
+ background-repeat: no-repeat;
+ padding: 12px 30px 12px 10px;
+ cursor: pointer;
+ font-family: Helvetica,sans-serif;
+ font-size: 10pt;
+}
+
+.elvStatic span.bgImageLinkNoIcon {
+ border-top: 1px solid #FFFFFF;
+ border-left: 1px solid #FFFFFF;
+ border-right: 1px solid #808080;
+ border-bottom: 1px solid #808080;
+ background-color: #D4D0C8;
+ padding: 5px 10px 5px 10px;
+ cursor: pointer;
+ font-family: Helvetica,sans-serif;
+ font-size: 10pt;
+ color: #000000;
+}

@@ -1,0 +1,186 @@
+/* ************************************************************** *
+   hitengine.css
+ * ************************************************************** */
+
+/* ************************************************************** *
+   Suggest
+ * ************************************************************** */
+.suggest_header {
+}
+.suggest_header_zeile {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#C3C8CE;
+}
+.suggest_header_zelle {
+	padding-top:6px;
+	padding-bottom:6px;
+	padding-left:5px;
+	padding-right:5px;
+}
+.suggest_footer {
+}
+.suggest_footer_zeile {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	color:#222222;
+	background-color:#F7F7F7;
+}
+.suggest_footer_zelle {
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:5px;
+	padding-right:5px;
+}
+.suggest {
+	padding:5px;
+}
+.suggest_typ_zeile {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#808080;
+	background-color:#F7F7F7;
+}
+.suggest_typ_zelle {
+	min-height:18px;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+.suggest_nav_zeile {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#FF7300;
+	background-color:#F7F7F7;
+}
+.suggest_nav_zelle {
+	/*border-top:1px solid #000000;*/
+	line-height:18px;
+}
+.suggest_zeile {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	color:#222222;
+	background-color:#F7F7F7;
+	cursor:pointer;
+}
+.suggest_zeile_on {
+	background-color:#FFFFBB !important;
+}
+.suggest_zeile_selected {
+	background-color:#FFFFBB !important;
+}
+.suggest_zelle {
+	/*border-bottom:1px solid #969696;
+	min-height:18px;
+	*/
+	padding-top:1px;
+	padding-bottom:1px;
+}
+#suggest {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:10px;
+	color:#000000;
+	background-color:#F7F7F7;
+	width:650px;
+	/* width:398px; */
+	/* border:3px solid #FF7300; */
+	/* border:1px solid #898383; */
+	z-index:100;
+}
+a.suggest_hitnext:link,
+a.suggest_hitprev:link      { color:#FF7300; text-decoration:none; font-weight:bold; }
+a.suggest_hitnext:hover,
+a.suggest_hitprev:hover     { color:#FF7300; text-decoration:underline; }
+a.suggest_hitnext:active,
+a.suggest_hitprev:active    { color:#FF7300; text-decoration:none; }
+a.suggest_hitnext:visited,
+a.suggest_hitprev:visited   { color:#FF7300; text-decoration:none; }
+
+a.suggest_close:link        { color:#FFFFFF; text-decoration:none; }
+a.suggest_close:hover       { color:#FFFFFF; text-decoration:none; }
+a.suggest_close:active      { color:#FFFFFF; text-decoration:none; }
+a.suggest_close:visited     { color:#FFFFFF; text-decoration:none; }
+
+a.suggest_hitengine:link    { color:#842222; text-decoration:none; }
+a.suggest_hitengine:hover   { color:#842222; text-decoration:underline; }
+a.suggest_hitengine:active  { color:#842222; text-decoration:none; }
+a.suggest_hitengine:visited { color:#842222; text-decoration:none; }
+
+/* ************************************************************** */
+
+/* ************************************************************** *
+   | Suggest Corners
+	 | ================================================
+	 | use: 4 corners with borderline outside a contentbox with class="inside"; 
+	 |      image  = upper half: top left corner, long borderline, top right corner
+	 |               under half: bottom left corner, long borderline, bottom right corner
+	 |      CHANGE = you have to change this for fitting to your image
+	 |      YCC    = You Can Change (or omit), if wanted
+	 |      DNC    = Do Not Change
+ * ************************************************************** */
+
+.suggest_top-left,
+.suggest_top-right, 
+.suggest_bottom-left, 
+.suggest_bottom-right { 
+	background-image: url('../images/suggest_corners.gif');
+	height: 4px;                     /* CHANGE: Normal = 1/2 height of the image) */
+	font-size: 2px;                  /* DNC: correction IE for height of the <div>'s */
+}
+.suggest_top-left, 
+.suggest_bottom-left { 
+	margin-right: 11px;              /* CHANGE: replace by the width of one of your corners */
+}
+.suggest_top-right, 
+.suggest_bottom-right { 
+	margin-left: 11px;               /* CHANGE: replace by the width of one of your corners */
+	margin-top: -4px;                /* CHANGE: replace by the height of one of your corners */
+}
+.suggest_top-right {
+	background-position: 100% 0;     /* DNC: position right corner at right side, no vertical changes */
+}
+.suggest_bottom-left  { 
+	background-position: 0 -15px;    /* CHANGE: replace second number by negative height of one of your corners */
+	margin-top: 0px;
+	height: 7px;
+}
+.suggest_bottom-right { 
+	background-position: 100% -15px; /* CHANGE: replace second number by negative height of one of your corners */
+	margin-top: -7px;
+	height: 7px;
+}
+.suggest_inside {
+	border-left: 4px solid #FF7300;  /* YCC: color & properties of the left-borderline */
+	border-right: 4px solid #FF7300; /* YCC: color & properties of the right-borderline */
+	background: #EFEFEF;             /* YCC: background-color of the inside */
+	color: #F7F7F7;                  /* YCC: default text-color of the inside */
+	padding-left: 0px;               /* YCC: all texts at some distance of the left border */
+	padding-right:0px;               /* YCC: all texts at some distance of the right border */
+}
+.suggest_notopgap    { margin-top: 0; }                            /* to avoid splitting of the box */
+.suggest_nobottomgap { margin-bottom: -1px; padding-bottom: 1px; } /* to avoid splitting of the box */
+
+/* ************************************************************** */
+implementation in the page:
+	...
+	<head>
+	<link rel="stylesheet" type="text/css" href="hitengine.css">
+	...
+	</head>
+	
+	<body>
+	...
+	<div class="suggest_top-left"></div><div class="suggest_top-right"></div>
+		<div class="suggest_inside">
+		<p class="suggest_notopgap">Your text & other things inside</p>
+		...
+		<p class="suggest_nobottomgap">...</p>
+		</div>
+	<div class="suggest_bottom-left"></div><div class="suggest_bottom-right"></div>
+	...
+	</body>
+/* ************************************************************** */
