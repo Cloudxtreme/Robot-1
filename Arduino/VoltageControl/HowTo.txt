@@ -1,0 +1,60 @@
+Wer seinen Arduino oder einen ATmega bzw. ATtiny über eine Batterie mit Spannung versorgt muss immer damit rechnen, dass die irgendwann einmal leer ist und dann der Mikrocontroller ohne Vorwarnung den Dienst einstellt. Hier ist es hilfreich, die Versorgungsspannung zu überwachen. Sollte sie unter einen bestimmten kritischen Wert fallen, kann man sich zum Beispiel durch anschalten einer LED warnen lassen.
+Die Überwachung der Spannung kann ohne zusätzliche Hardware erfolgen. Möglich macht es der AD-Wandler. Dieser arbeitet ja bekannterweise nach folgender Formel:
+WERT_ADC = V_EINGANG * 1023/V_REFERENZ
+Nun könnte man natürlich meinen: "Ich lege einfach meine Versorgungsspannung an den Eingang des AD-Wandlers und kann diese so messen". Das funktioniert leider nicht, da die Referenzspannung des AD-Wandler ebenfalls die Versorgungsspannung ist. Der Wert des AD-Wandlers wäre als immer 1023.
+Doch es gibt einen Trick: jeder Mikrocontroller erzeugt eine interne Referenzspannung, die so genannte "Bandgap Voltage" V_BG. Diese beträgt beim ATmega328, der im Arduino Uno zum Einsatz kommt, 1.1V.  Diese Spannung lässt sich auf den Eingang des AD-Wandlers legen. mit V_EINGANG = V_BG und V_REFERENZ = V_CC ergibt sich dann:
+WERT_ADC = V_BG * 1023/V_CC
+oder umgeformt:
+V_CC = V_BG * 1023/WERT_ADC
+Setzt man nun ein V_BG = 1100 (in mV) ergibt sich:
+V_CC = 1100 * 1023/WERT_ADC
+V_CC ist nun der Wert der Spannungsversorgung in mV
+
+Umgesetzt in Code sieht das dann so aus:
+
+int led = 13;  //Pin der LED
+int adc_low, adc_high;  //Zwischenspeicher für die Ergebnisse des ADC
+long adc_result;  //Gesamtergebnis der Messung des ADC
+long vcc;  //Versorgungsspannung
+
+void setup() {    
+  pinMode(led, OUTPUT);  
+
+  ADMUX |= (1<<REFS0); //VCC als Referenzspannung für den AD-Wandler
+  ADMUX |= (1<<MUX3) | (1<<MUX2) | (1<<MUX1);  //1.1V Referenzspannung als Eingang für ADC 
+  delay(10);  //warten bis sich die Referenzspannung eingestellt hat
+  ADCSRA |= (1<<ADEN);   //ADC aktivieren
+}
+
+// the loop routine runs over and over again forever:
+void loop() {    
+  ADCSRA |= (1<<ADSC);  //Messung starten
+
+  while (bitRead(ADCSRA, ADSC));  //warten bis Messung beendet ist
+  //Ergebnisse des ADC zwischenspeichern. Wichtig: zuerst ADCL auslesen, dann ADCH
+  adc_low = ADCL;
+  adc_high = ADCH;
+
+  adc_result = (adc_high<<8) | adc_low; //Gesamtergebniss der ADC-Messung 
+  vcc = 1125300L / adc_result;  //Versorgungsspannung in mV berechnen (1100mV * 1023 = 1125300)
+
+  //wenn Spannung kleiner als 5V 
+  if (vcc < 5000)
+  {
+    digitalWrite(led, HIGH);  //schalte LED an
+  }
+  //wenn größer oder gleich 5V
+  else 
+  {
+    digitalWrite(led, LOW);  //schalte LED aus
+  }
+
+  delay(500);
+}
+
+
+In der setup()-Funktion wird zuerst der AD-Wandler so eingestellt, dass zum einen die Versorgungsspannung V_CC als Referenz und zum anderen die Bandgap-Spannung V_BG als Eingang für den AD-Wandler dienen. Nach einer kurzen Wartezeit wird der AD-Wandler dann aktiviert.
+In der loop() wird dann die Messung durch setzen des Bits ADSC gestartet. Ist die Messung beendet (ADSC ist wieder 0) wird das Ergebnis der Wandlung aus den Registern ADCL (die unteren 8 Bit) und ADCH (die oberen 2 Bit) ausgelesen und zu einem 10-Bit-Ergebnis zusammengesetzt. Aus diesem wird dann nach der obigen Formel die Versorgungsspannung bestimmt. Liegt sie unter 5V, wird eine LED eingeschaltet.
+
+Diese Methode funktioniert prinzipiell mit allen ATmegas oder ATtinys. Je nach verwendetem µC müssen allerdings in den Registern des AD-Wandlers andere Bits gesetzt werden. Welche das genau sind, kann dem Datenblatt entnommen werden. 
+

@@ -1,0 +1,823 @@
+/* ***************************************************************************************************** */
+/* CONTENT CSS */
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #999999;
+	background-image: url('../images/bg.gif');
+	background-position: top center;
+	background-repeat: repeat-y;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	color: #626262;
+}
+
+#wrapper {
+	width: 928px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#logo {
+	float: left;
+	padding-top: 25px;
+	padding-left:40px;
+	padding-bottom:25px;
+}
+
+#topmenu {
+	float:left;
+	padding-top: 30px;
+}
+
+.frontimage {
+	margin-bottom: 14px;
+}
+
+/* Menu */
+#mainmenu {
+	clear: both;
+	width: 900px;
+	height: 30px;
+	background-image: url('../images/menu_bg.jpg');
+	margin-left:14px;
+}
+
+/* top navigation */
+ul#mainlevel-nav{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	background: none
+}
+
+ul#mainlevel-nav li{
+	padding-left: 0px;
+	padding-right: 0px;
+	float: left;
+	margin: 0;
+	font-size: 11px;
+	line-height: 30px;
+	white-space: nowrap;
+	border-right: 1px solid #666666;
+	background: none
+}
+
+ul#mainlevel-nav li a{
+	display: block;
+	padding-left: 14px;
+	padding-right: 14px;
+	text-decoration: none;
+	color: #ffffff;
+	background: transparent;
+}
+
+ul#mainlevel-nav li a:hover{
+	color: #999999;
+	text-decoration: underline;
+}
+
+/* for mainmenu flat list on the blue bg */
+ul#mainlevel-menu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	background: none
+}
+
+ul#mainlevel-menu li{
+	padding-left: 0px;
+	padding-right: 0px;
+	float: left;
+	margin: 0;
+	font-size: 13px;
+	line-height: 32px;
+	white-space: nowrap;
+}
+
+ul#mainlevel-menu li a{
+	display: block;
+	padding-left: 14px;
+	padding-right: 14px;
+	text-decoration: none;
+	color: #ffffff;
+	background: transparent;
+}
+
+ul#mainlevel-menu li a:hover{
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+
+/* End Topmenu */
+
+
+/* Content */
+
+#maincontent {
+}
+
+div#content {
+	width:666px;
+	float:right;
+	margin-right:14px;
+	margin-top:14px;
+	margin-bottom:14px;
+}
+
+
+
+/* Menu Sub */
+
+
+
+
+/* End Menu */
+
+#left {
+	width:220px;
+	float:left;
+	margin-left:14px;
+	margin-bottom: 14px;
+}
+
+
+.clr{
+	clear:both
+}
+
+/*Make round left modules */
+
+div.module_newsletter>div,
+div.module_menu>div,
+div.module>div {
+	background-image: url(../images/box_bg.gif);
+}
+
+div.module_newsletter>div>div,
+div.module_menu>div>div,
+div.module>div>div {
+	background-image: url(../images/box_top.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+div.module_newsletter>div>div>div,
+div.module_menu>div>div>div,
+div.module>div>div>div {
+	background-image: url(../images/box_bot.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-top: 5px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+
+/* End round left modules */
+
+
+.module_newsletter h3, 
+.module_menu h3, 
+.module h3 {
+	font-size: 12px;
+	line-height: 10px;
+	font-weight: bold;
+}
+
+.module_menu ul {
+	margin:0;
+	padding: 0;
+	list-style:none;
+}
+
+.module ul {
+	list-style:none;
+	padding-top: 10px;
+	margin:0;
+	padding-left: 0px;
+}
+
+.module li {
+}
+
+.module li a,
+.module li span {
+	font-size:11px;
+	color:#ce2027;
+	text-decoration:none;
+}
+
+.module_menu li {
+	margin:0;
+	padding: 0;
+	position:relative;
+	text-decoration:none;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #333;
+}
+
+.module_menu li a:hover {
+	background-color:#f0f0f0;
+}
+
+.module_menu li li {
+	margin-left: 15px;
+}
+
+.module_menu ul.menu>li:first-child {
+	border:none;
+}
+
+
+.module_menu li a,
+.module_menu li span {
+	text-decoration:none;
+/*	font-size:12px;
+	color:#333333;*/
+	line-height:24px;
+	padding:5px;
+}
+
+.module_menu li a>span {
+	color:#666;
+}
+
+.module_menu li span>span {
+	color:#888;
+}
+
+.moduletable{
+}
+
+.module_menu ul.menu>li> a,
+.module_menu ul.menu>li> span {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+
+.module_menu ul.menu>li>ul>li a,
+.module_menu ul.menu>li>ul>li span {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.module_menu ul.menu>li>ul>li>ul>li a,
+.module_menu ul.menu>li>ul>li>ul>li span {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+
+
+div.module_newsletter,
+div.module_menu,
+div.module {
+	margin-top:14px;
+}
+
+
+.module p {
+	font-size:10px;
+}
+
+/*module_menu*/
+
+fieldset {
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+input.inputbox {
+	width:188px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+input.button {
+	border: 1px solid #e0e0e0;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+
+input#modlgn_remember {
+	width:10px;
+	border:none;
+}
+
+
+/* Main CSS */
+
+img {
+	border:none;
+}
+
+.contentheading, h1 {
+	font-size:16px;
+	font-weight:bold;
+}
+
+h2,h3,h4,h5,h6 {
+	font-size:14px;
+	font-weight:bold;
+}
+
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+	color:#444;
+	font-size:14px;
+	font-weight:bold;
+}
+
+p {
+	line-height: 18px;
+}
+
+a { 
+	color: #626262;
+	text-decoration:underline;
+}
+
+#content a {
+	  color: #444;
+}
+
+#content a:hover,
+#content a:active {
+	  color: #999;
+}
+
+
+.modifydate, .createdate, .small {
+	font-size:9px;
+	color:#b8151c;
+}
+
+.componentheading {
+	font-size:16px;
+	font-weight:bold;
+	color:#b8151c;
+	background-image: url(../images/contentp_line.gif);
+	background-position: right bottom;
+	margin-bottom: 10px;
+	margin-left: 2px;
+	background-repeat: no-repeat;
+}
+
+.componentheading a{
+	text-decoration:none;
+	font-size:16px;
+	font-weight:bold;
+	color: #626262;
+	background-image: url(../images/spacer.gif);
+}
+
+#footer {
+	clear:both;
+	margin-left:14px;
+
+}
+#footer_top {
+	background-image: url(../images/footer_top.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	height:10px;
+	width:900px;
+	clear:both;
+}
+
+
+#footer_bot{
+	background-image: url(../images/footer_bot.jpg);
+	height:10px;
+	width:900px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#footer_content {
+	padding:0px;
+	text-align:center;
+	background-image: url(../images/footer_bg.jpg);
+	clear:both;
+	margin-left:-14px;
+	background-repeat: repeat-y;
+	background-position: top;
+}
+#spacer {
+	width: 928px;
+	margin-left:auto;
+	margin-right:auto;
+	height:14px;
+	clear:both;
+	padding-top: 10px;
+}
+
+#copyright {
+	margin-top:10px;
+	text-align:center;
+	font-size:9px;
+	text-decoration:none;
+	line-height:18px;
+}
+
+#webmedie {
+	font-size:9px;
+	text-decoration:none;
+	line-height:18px;
+}
+
+#mainmenu>form {
+	float:right;
+	margin-top:4px;
+}
+
+
+
+/* Joomfish */
+
+#jflanguageselection {
+    float: right;
+	margin: 4px 4px 0px 5px;
+}
+
+/* language lists with UL (names & images) */
+#jflanguageselection ul.jflanguageselection
+{
+	list-style: none;
+	padding: 0;
+	margin-top: 3px;
+	font-weight: normal;
+}
+
+#jflanguageselection ul.jflanguageselection li
+{
+	background-image: none;
+	padding-left: 0px;
+	padding-right: 0px;
+	float: left;
+	margin: 1px 1px 1px 1px;
+	white-space: nowrap;
+	border: none;
+	font-size: 0.9em;
+}
+
+#jflanguageselection ul.jflanguageselection li#active_language
+{
+ 	font-weight: bold;
+	font-size: 1.0em;
+}
+
+#jflanguageselection ul.jflanguageselection li a
+{
+	display: block;
+}
+
+#jflanguageselection ul.jflanguageselection img
+{
+	border: none;
+}
+
+div#jflanguageselection img.langImg {
+	float: left;
+	border: none;
+	margin-top: 3px;
+}
+div#jflanguageselection li img.langImg {
+	float: left;
+	border: none;
+	margin: 0px 1px 0px 1px;
+}
+
+/** Styles for the drop down list */
+
+#jflanguageselection select.jflanguageselection
+{
+	border: 1px solid #cccccc;
+}
+
+#jflanguageselection label.jflanguageselection
+{
+	position:absolute;
+	left:-1000px;
+}
+
+/** Controls Raw Display of Images **/
+
+.rawimages {
+	text-align: center;
+	margin-top: 3px;
+}
+.rawimages img {
+	border: none;
+	margin:2px;
+}
+.rawimages span#active_language img
+{
+	margin:2px;
+	border: none;
+}
+
+div#jflanguageselection img.langImg{ float: left; border: none; margin-top: 3px; }
+div#jflanguageselection li img.langImg{ float: left; border: none; margin: 1px 3px 0px 0px; }
+
+#jflanguageselection .opaque{
+	/*filter:alpha(opacity=30);*/
+}
+#jflanguageselection option.opaque{
+	color:graytext;
+}
+
+/* Link classes */ 
+a.pdf {
+  background-image: url('../images/pdf_icon.png');
+  background-position: 0px 50%;
+  background-repeat: no-repeat;
+  padding-left: 18px;
+}
+
+a.image {
+  background-image: url('../images/jpg_icon.png');
+  background-position: 0px 90%;
+  background-repeat: no-repeat;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+a.svg {
+  background-image: url('../images/svg_icon.gif');
+  background-position: 0px 50%;
+  background-repeat: no-repeat;
+  padding-left: 28px;
+}
+
+a.email {
+  background-image: url('../images/mail_icon.png');
+  background-position: 0px 70%;
+  background-repeat: no-repeat;
+  padding-left: 28px;
+}
+
+a.android {
+  background-image: url('../images/android_16x16.png');
+  background-position: 0px 70%;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  line-height: 180%;
+}
+
+a.firmware {
+  background-image: url('../images/firmware_16x16.png');
+  background-position: 0px 70%;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  line-height: 180%;
+}
+
+
+
+
+
+
+
+
+
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Tabber
+ * @version         2.1.3
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2012 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+#content div.tabber_nav {
+	display: block;
+	clear: left;
+	margin: 5px 0 0 0;
+	padding: 0 10px;
+	line-height: 1em;
+	zoom: 1; /* Fix for IE height issue */
+}
+#content div.tabber_nav ul.tabber_tabs {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	list-style-image: none !important;
+	background: none !important;
+}
+#content div.tabber_nav li.tabber_tab {
+	float: left;
+	margin: 2px 2px 0 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	list-style-image: none !important;
+	background: none !important;
+}
+#content div.tabber_nav li.tabber_tab.active {
+	margin-top: 0 !important;
+}
+/* Tabs */
+#content div.tabber_nav li.tabber_tab a,
+#content div.tabber_nav li.tabber_tab a:link,
+#content div.tabber_nav li.tabber_tab a:visited,
+#content div.tabber_nav li.tabber_tab a:active,
+#content div.tabber_nav li.tabber_tab a:hover {
+	color: #666666;
+	outline: 0;
+	text-decoration: none;
+}
+#content div.tabber_nav li.tabber_tab a,
+#content div.tabber_nav li.tabber_tab a:hover {
+	display: block;
+	width: auto;
+	_width: 0%;
+	padding: 5px 5px 0 5px;
+	height: 18px;
+	_height: 25px;
+	font-size: 12px;
+	line-height: 1em !important;
+	font-weight: bold;
+	white-space: nowrap;
+	border: solid 1px #B4B4B4;
+	border-bottom: none;
+	background: #FFFFFF url(../images/gradient.png) repeat-x 0 -100px;
+	text-decoration: none !important;
+}
+#content div.tabber_container.rounded div.tabber_nav li.tabber_tab a,
+#content div.tabber_container.rounded div.tabber_nav li.tabber_tab a:hover {
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
+/* Tabs: Active state */
+#content div.tabber_nav li.tabber_tab.active a,
+#content div.tabber_nav li.tabber_tab.active a:hover {
+	color: #FFFFFF;
+	background-color: #6B7B95;
+}
+#content div.tabber_nav li.tabber_tab.active a {
+	padding-bottom: 2px;
+}
+/* Tabs: Hover state */
+#content div.tabber_nav li.tabber_tab a:hover {
+	color: #333333;
+	background-color: #9DB5DB; /* 50% white */
+}
+
+/* Content area */
+#content div.tabber_content,
+#content div.tabber_content > div,
+#content div.tabber_content div.tabber_item {
+	position: relative !important;
+	overflow: hidden !important;
+}
+#content div.tabber_content {
+	margin-top: -1px;
+	clear: left;
+	padding: 10px 20px;
+	border: 1px solid #B4B4B4;
+}
+#content div.tabber_container.rounded div.tabber_content {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/* STYLING FOR IF JAVASCRIPT FAILS */
+#content div.tabber_noscript div.tabber_content {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* EXTRA STYLING
+ * If you want to change styles, it's best to place your custom (overriding) styles in the templates stylesheet,
+ * so they do not get overwritten when updating Tabber.
+ */
+
+/* Style: blue */
+/* Tabs: Normal state */
+#content div.tabber_nav li.tabber_tab.blue a {
+	background-color: #BFDDFF; /* 75% white */
+}
+/* Tabs: Hover state */
+#content div.tabber_nav li.tabber_tab.blue a:hover {
+	background-color: #80BCFF; /* 50% white */
+}
+/* Tabs: Active state */
+#content div.tabber_nav li.tabber_tab.active.blue a,
+#content div.tabber_nav li.tabber_tab.active.blue a:hover {
+	background-color: #0078FF;
+}
+/* Content area */
+#content div.tabber_content.blue {
+	/*background-color: #BFDDFF;*/
+}
+
+/* Style: green */
+/* Tabs: Normal state */
+#content div.tabber_nav li.tabber_tab.green a {
+	background-color: #BFE5C0; /* 75% white */
+}
+/* Tabs: Hover state */
+#content div.tabber_nav li.tabber_tab.green a:hover {
+	background-color: #80CC82; /* 50% white */
+}
+/* Tabs: Active state */
+#content div.tabber_nav li.tabber_tab.active.green a,
+#content div.tabber_nav li.tabber_tab.active.green a:hover {
+	background-color: #009905;
+}
+/* Content area */
+#content div.tabber_content.green {
+	/*background-color: #BFE5C0;*/
+}
+
+/* Style: grey */
+/* Tabs: Normal state */
+#content div.tabber_nav li.tabber_tab.grey a {
+	background-color: #D9D9D9; /* 75% white */
+}
+/* Tabs: Hover state */
+#content div.tabber_nav li.tabber_tab.grey a:hover {
+	background-color: #B3B3B3; /* 50% white */
+}
+/* Tabs: Active state */
+#content div.tabber_nav li.tabber_tab.active.grey a,
+#content div.tabber_nav li.tabber_tab.active.grey a:hover {
+	background-color: #666666;
+}
+/* Content area */
+div.tabber_content.grey {
+	/*background-color: #D9D9D9;*/
+}
+
+/* Style: mystyle */
+/* This is an example of how you can make your own style
+ * You can add styles as you like
+ * You can use css to style the Tabber elements how you want it.
+ * It's best to place your custom (overriding) styles in your templates stylesheet (css file),
+ * so they do not get overwritten when you update this extension.
+ */
+/* Tabs: Normal state */
+#content div.tabber_slide.mystyle a {
+	background-color: #123456;
+}
+
+/* Tabs: Hover state */
+#content div.tabber_slide.mystyle a:hover {
+	background-color: #ABCDEF;
+}
+
+/* Tabs: Active state */
+#content div.tabber_slide.active.mystyle a,
+#content div.tabber_slide.active.mystyle a:hover {
+	background-color: #456789;
+}
+
+/* Content area */
+div.tabber_content.mystyle {
+	/*background-color: #CCDDEE;*/
+}
+
+.ul08 > li {
+    margin-bottom: 0.8em;
+}
+
+hr.shade {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0; 
+  height: 1px; 
+  background: #aaa; 
+  background-image: -webkit-linear-gradient(left, #ddd, #aaa, #ddd); 
+  background-image: -moz-linear-gradient(left, #ddd, #aaa, #ddd); 
+  background-image: -ms-linear-gradient(left, #ddd, #aaa, #ddd); 
+  background-image: -o-linear-gradient(left, #ddd, #aaa, #ddd);
+}
+
+.color0 {color:#222222}
+.color1 {color:#280099}
+.color2 {color:#0066CC}
+.color3 {color:#6B4794}
+.color4 {color:#DB4220}
+.color5 {color:#E67814}
+.color6 {color:#B84700}
+

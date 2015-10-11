@@ -1,0 +1,1 @@
+twttr.receiveCount({"count":0,"url":"http:\/\/www.tamiyausa.com\/product\/item.php\/?product-id=70097"});

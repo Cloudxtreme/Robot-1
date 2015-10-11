@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de"><head>
+		<title>Roboter selbst bauen und programmieren – Roboterbausatz NIBObee | ELVjournal</title>
+		<!-- base href="http://www.elv.de/" -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="title" content="Roboter selbst bauen und programmieren – Roboterbausatz NIBObee | ELVjournal">
+		<meta name="author" content="ELV Elektronik AG">
+		<meta name="copyright" content="ELV Elektronik AG">
+		<meta name="revisit" content="14">
+		<meta name="keywords" content="Bausatz, Löten, Elektronik, Haustechnik, Tutorial, Tipps, Ratgeber">
+		<meta name="description" content="Kleine Roboter selbst programmieren – das liegt im Trend, lassen sich doch so spielerisch Erfahrungen bei der Programmierung von Mikrocontrollern samm">
+		<meta name="abstract" content="">
+		<meta name="page-topic" content="">
+		<meta name="audience" content="">
+		<meta name="robots" content="index,follow">
+		<meta name="language" content="">
+		<link href="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal.css" rel="stylesheet" type="text/css">
+		<link href="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/hitengine.css" rel="stylesheet" type="text/css">
+		<link href="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/jquery-ui-1.css" rel="stylesheet" type="text/css">
+		<script src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/ga.js" async="" type="text/javascript"></script><script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/prototype.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/scriptaculous.js"></script><script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/builder.js"></script><script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/effects.js"></script><script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/dragdrop.js"></script><script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/controls.js"></script><script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/slider.js"></script><script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/sound.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/jquery-1.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/jquery_004.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/jquery-ui-1.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/jquery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/hitengine.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/js_functions_produktvergleich.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/projekktor.js"></script>	
+				
+		<script type="text/javascript" language="JavaScript">
+			ProductCompareList = ',';
+		</script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/functions.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/swfobject.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/slider-min.js"></script>
+		<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/jquery_003.js"></script>
+		<script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/ydworld-latest.js"></script>
+		<!-- Include Markitup-Editor -->
+		<script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/jquery_002.js"></script>
+		<link rel="stylesheet" type="text/css" href="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/style.css">
+		<link rel="stylesheet" type="text/css" href="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/style_003.css">
+		<script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/set.js"></script>
+		<link rel="stylesheet" type="text/css" href="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/style_002.css">		
+		<link type="text/css" rel="stylesheet" href="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/static.css">
+		<!-- Neue Navigation Facelift -->
+		<script type="text/javascript" language="javascript">
+			function navi_show(obj) { obj.getElementsByTagName('ul')[0].style.visibility = 'visible'; };
+			function navi_hide(obj) { obj.getElementsByTagName('ul')[0].style.visibility = 'hidden'; };
+		</script>
+	<link rel="stylesheet" type="text/css" href="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/socialshareprivacy.css"></head>
+	<body class="journal">
+
+	<!-- econda helper v1.2 -->
+        <script type="text/javascript">
+        //<![CDATA[
+        	(function (module) {
+
+        		if (!module) window.emosHelper = module = {};
+        		var content = '',
+                siteid = '',
+                pageid = '';
+
+        		function convert(value) {
+        			return decodeURIComponent(value).replace(/^[a-z]/, function (match) {
+        				return match.toUpperCase();
+        			});
+        		};
+
+        		module.content = function (prefix) {
+        			var path = location.pathname
+                    .replace(/(index)?[.;][a-zA-Z0-9=._]+/g, '')
+                    .replace(/([^\/]+)|(\/+)/g, function (match, noSlash, slash) {
+                    	return slash ? '/' : convert(noSlash);
+                    }).replace(/^\/|\/$/g, '');
+        			if (prefix && !/\/$/.test(prefix)) prefix += '/';
+        			return content = path && path !== '/' ? (prefix || '') + path : 'Start';
+        		};
+
+        		module.siteid = function () {
+        			return siteid = location.hostname.replace('www.', '');
+        		};
+
+        		module.pageid = function () {
+        			return pageid = (content || module.content()).toLowerCase().replace(/\//g, '');
+        		};
+
+        	})(window.emosHelper);
+        //]]>
+        </script>
+        <script type="text/javascript">
+        //<![CDATA[
+        	window.emosTrackVersion = 2;
+        //]]>
+        </script>
+        <script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/emos2.js"></script>
+        <script type="text/javascript">
+        //<![CDATA[
+        	var emospro = {};
+        	emospro.content = 'Journal/Content'; /* Optionaler Pfad-Prefix - Start, Shop... */
+        	emospro.siteid = 'elv.de'; /*Site*/
+        	emospro.countryid = 'DE'/* Land*/
+        	emospro.langid = 'DE'; /*Sprache*/
+        	/*emospro.siteid = 'elv.nl';zum lokalen Testen*/
+        	/*emospro.countryid = 'NL'Land*/
+        	/*emospro.langid = 'NL'; Sprache*/
+        	emospro.pageId = emospro.content + '/' + emosHelper.pageid(); /* Nur bei econda Click Monitor, sonst Zeile entfernen */
+        	emospro.search = ''; /*Suchergebnisse*/
+        	emospro.orderProcess = ''; /*Warenkorbschritte*/
+        //]]>
+        </script>
+	<!-- econda helper v1.2 -->
+    <!--
+        
+        <div style="width:100%;height:auto;display:block;background-color:Black;">
+            <a href="http://www.elv.de">Zurück</a>
+        </div>
+    
+    -->
+             
+
+		<div id="journal_body" class="journal_body" style="top-padding:0;">
+			<!-- Logo -->
+			<div id="journal_head" class="journal_head" onclick="document.location.href='/journal'">
+				<div class="navigation01"><div style="display:inline;"><div class="navigation01_outerdiv"><div class="navigation01_innerdiv" style="background-image: url(/images/menu_top_verlauf_hell.png)"><a href="http://www.elv.de/controller.aspx?cid=746" class="orange">Kundenlogin</a></div></div><div class="navigation01_outerdiv"><div class="navigation01_innerdiv"><a href="http://www.elv.de/kontakt-journal.html" class="navigation01_link">Kontakt</a></div></div><div class="navigation01_outerdiv"><div class="navigation01_innerdiv"><a href="http://www.elv.de/newsletter-journal.html" class="navigation01_link">Newsletter</a></div></div><div class="navigation01_outerdiv"><div class="navigation01_innerdiv"><a href="http://www.elv.de/karriere-journal.html" class="navigation01_link">Karriere</a></div></div><div class="navigation01_outerdiv" style="border:0px;"><a href="http://www.elv.de/" onclick="_gaq.push(['_trackEvent', 'Switch', 'followed', 'zum Shop'])"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/link_zum_shop.png" alt="" border="0"></a></div></div></div>
+				<!--<div id="journal_produktfunktionen" class="journal_produktfunktionen">-->
+				<div class="new-header">
+					<div class="main-nav"><ul><li onmouseover="navi_show(this)" onmouseout="navi_hide(this)"><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_links.png" alt="" border="0"></span><span style="height:35px;float:left;" class="journal_prdfunktion_inaktiv"><a href="http://www.elv.de/videos-journal-2.html" class="journal_prdfunktion_inaktiv">Videos</a></span><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_rechts.png" alt="" border="0"></span><div class="clearer"><ul style="z-index:1;"><li><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=2">Haustechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=8">Beleuchtung</a></li><li><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=7">Sicherheitstechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=12">Multimedia - Sat - TV</a></li><li><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=4">Bausätze</a></li></ul></div></li><li onmouseover="navi_show(this)" onmouseout="navi_hide(this)"><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_links.png" alt="" border="0"></span><span style="height:35px;float:left;" class="journal_prdfunktion_inaktiv"><a href="http://www.elv.de/foren-journal-1.html" class="journal_prdfunktion_inaktiv">Foren</a></span><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_rechts.png" alt="" border="0"></span><div class="clearer"><ul style="z-index:1;"><li><a href="http://www.elv.de/forum/hausautomations-systeme-1.html">Hausautomations-Systeme</a></li><li><a href="http://www.elv.de/forum/haustechnik-1.html">Haustechnik</a></li><li><a href="http://www.elv.de/forum/beleuchtung-1.html">Beleuchtung</a></li><li><a href="http://www.elv.de/forum/sicherheitstechnik.html">Sicherheitstechnik</a></li><li><a href="http://www.elv.de/forum/klima-wetter-umwelt-1.html">Klima - Wetter - Umwelt</a></li><li><a href="http://www.elv.de/forum/computer-netzwerk.html">Computer/Netzwerk</a></li><li><a href="http://www.elv.de/forum/multimedia-sat-tv.html">Multimedia - Sat - TV</a></li><li><a href="http://www.elv.de/forum/telefon-kommunikation-1.html">Telefon - Kommunikation</a></li><li><a href="http://www.elv.de/forum/kfz-technik.html">Kfz-Technik</a></li><li><a href="http://www.elv.de/forum/batterien-akkus-ladegeraete.html">Batterien - Akkus - Ladegeräte</a></li><li><a href="http://www.elv.de/forum/stromversorgung-1.html">Stromversorgung</a></li><li><a href="http://www.elv.de/forum/modellsport-freizeit.html">Freizeit- und Outdoortechnik</a></li><li><a href="http://www.elv.de/forum/werkzeug-loettechnik.html">Werkzeug - Löttechnik</a></li><li><a href="http://www.elv.de/forum/bausaetze.html">Bausätze</a></li><li><a href="http://www.elv.de/forum/messtechnik-1.html">Messtechnik</a></li><li><a href="http://www.elv.de/forum/elvjournal.html">ELVjournal</a></li><li><a href="http://www.elv.de/forum/off-topic.html">Off-Topic</a></li></ul></div></li><li onmouseover="navi_show(this)" onmouseout="navi_hide(this)"><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_links.png" alt="" border="0"></span><span style="height:35px;float:left;" class="journal_prdfunktion_inaktiv"><a href="http://www.elv.de/technik-news-journal-1.html" class="journal_prdfunktion_inaktiv">Technik-News</a></span><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_rechts.png" alt="" border="0"></span></li><li onmouseover="navi_show(this)" onmouseout="navi_hide(this)"><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_links.png" alt="" border="0"></span><span style="height:35px;float:left;" class="journal_prdfunktion_inaktiv"><a href="http://www.elv.de/wissen-journal-1.html" class="journal_prdfunktion_inaktiv">Wissen</a></span><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_rechts.png" alt="" border="0"></span><div class="clearer"><ul style="z-index:1;"><li><a href="http://www.elv.de/faq-datenbank-journal-1.html" class="navi_sub">FAQ-Datenbank</a><ul><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1008">Batterien, Akkus, Ladegeräte</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1010">Bausätze, Lernpakete, Literatur</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1002">Beleuchtung</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1005">Computer-/Netzwerktechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1014">Electronic Components</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1000">Haustechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1007">Kfz-Elektronik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1003">Klima-Wetter-Umwelt</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1013">Messtechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1009">Modellsport, Freizeit</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1004">Multimedia-SAT-TV</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1012">Netzgeräte, Wechselrichter</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1001">Sicherheitstechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1006">Telefon-/Kommunikationstechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=1&amp;detail2=1011">Werkstatt, Labor</a></li></ul></li><li><a href="http://www.elv.de/ratgeber-journal.html" class="navi_sub">Ratgeber</a><ul><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=10">Batterien - Akkus - Ladegeräte</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=12">Bausätze</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=3">Beleuchtung</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=7">Computer-/Netzwerktechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=2">Electronic-Components</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=11">Freizeit- und Outdoortechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=17">Hausautomations-Systeme</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=1">Haustechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=9">Kfz-Technik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=5">Klima - Wetter - Umwelt</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=15">Messtechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=6">Multimedia - Sat - TV</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=14">Netzgeräte - Wechselrichter</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=4">Sicherheitstechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=8">Telefon-/Kommunikationstechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=1&amp;detail2=13">Werkzeug - Löttechnik</a></li></ul></li><li><a href="http://www.elv.de/elektronikwissen-journal-1.html" class="navi_sub">Elektronikwissen</a><ul><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=1">Audiotechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=13">Bauteile</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=6">Freizeit</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=10">Hausautomation</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=4">Haustechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=11">Kfz-Technik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=7">Kommunikation</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=5">Messtechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=2">Stromversorgung</a></li><li><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=1&amp;detail2=14">Videotechnik</a></li></ul></li><li><a href="http://www.elv.de/so-funktioniert-s-journal.html">So funktioniert´s</a></li><li><a href="http://www.elv.de/praxiswissen-journal.html">Praxiswissen</a></li></ul></div></li><li onmouseover="navi_show(this)" onmouseout="navi_hide(this)"><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_links.png" alt="" border="0"></span><span style="height:35px;float:left;" class="journal_prdfunktion_inaktiv"><a href="http://www.elv.de/fachbeitraege-journal.html" class="journal_prdfunktion_inaktiv">Fachbeiträge</a></span><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_rechts.png" alt="" border="0"></span><div class="clearer" style="right: 0; position: relative;"><ul style="right: 0;"><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1798">ELVintern</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1823">Experten testen</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1802">Praxiswissen</a></li><li><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=2&amp;detail2=1792">So funktioniert´s</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1822">Hausautomations-Systeme</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1787">Haustechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1797">Beleuchtung</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1790">Sicherheitstechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1799">Klima - Wetter - Umwelt</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1788">Computer/Netzwerk</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1795">Multimedia - Sat - TV</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1796">Telefon - Kommunikation</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1800">Kfz-Technik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1793">Stromversorgung</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1791">Freizeit- und Outdoortechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1844">Werkzeug - Löttechnik</a></li><li><a href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1789">Messtechnik</a></li></ul></div></li><li onmouseover="navi_show(this)" onmouseout="navi_hide(this)"><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_links.png" alt="" border="0"></span><span style="height:35px;float:left;" class="journal_prdfunktion_inaktiv"><a href="http://www.elv.de/fachmagazin-abo-journal.html" class="journal_prdfunktion_inaktiv">Fachmagazin &amp; Abo</a></span><span style="height:35px;float:left;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/tab_rechts.png" alt="" border="0"></span><div class="clearer" style="right: 0; position: relative;"><ul style="right: 0;"><li><a href="http://www.elv.de/aktuelle-ausgabe-journal.html" style="padding-left: 20px;">aktuelle Ausgabe</a></li><li><a href="http://www.elv.de/elvjournal-app-journal-1.html" style="padding-left: 20px;">ELVjournal-App</a></li><li><a href="http://www.elv.de/vorschau-journal-1.html" style="padding-left: 20px;">Vorschau</a></li><li><a href="http://www.elv.de/abonnement-journal-1.html" class="navi_sub_right" style="padding-left: 20px;">Abonnement</a><ul style="margin-left: -222px;"><li><a href="http://www.elv.de/abonnements-journal.html">Abonnements</a></li><li><a href="http://www.elv.de/online-abo-bestellen-journal.html">Online-Abo bestellen</a></li><li><a href="http://www.elv.de/jahresabo-bestellen-journal.html">Jahresabo bestellen</a></li><li><a href="http://www.elv.de/schnupperabonnement-bestellen-journal-1.html">Schnupperabonnement bestellen</a></li><li><a href="http://www.elv.de/abocode-freischalten-journal-1.html">Abocode freischalten</a></li><li><a href="http://www.elv.de/adresse-aendern-journal-1.html">Adresse ändern</a></li></ul></li><li><a href="http://www.elv.de/verzeichnis-der-fachbeitraege-journal-2.html" style="padding-left: 20px;">Verzeichnis der Fachbeiträge</a></li><li><a href="http://www.elv.de/archiv-der-elvjournale-journal-2.html" style="padding-left: 20px;">Archiv der ELVjournale</a></li></ul></div></li></ul></div>
+				</div>
+			</div>
+			<!-- /Logo -->
+			<!-- WK-Layer -->
+			<script type="text/javascript" language="javascript">
+				function top_warenkorb_layer_open(obj) {
+					if (obj)
+					{
+						var formular = obj;
+						// formular ermittlen
+						while (formular)
+						{
+							if (formular.tagName != 'FORM')
+							{
+								formular = formular.parentNode;
+							}
+							else
+							{
+								formular.setAttribute('target', 'iframe_warenkorb');
+								var formular_action = formular.getAttribute('action');
+								if (formular_action.indexOf('&print=8') == -1)
+									formular.setAttribute('action', formular_action + '&print=8');
+								break;
+							}
+						}
+					};
+					window.scrollTo(0, 0);
+					document.getElementById('warenkorb_layer').style.display='';
+					return false;
+				};
+				
+				function top_warenkorb_layer_close() {
+					document.getElementById('iframe_warenkorb').src='/warenkorb_layer_leer.htm';
+					document.getElementById('warenkorb_layer').style.display='none';
+					return false;
+				};
+
+				function top_warenkorb_layer_setValue(value) {
+					document.getElementById('top_warenkorb').innerHTML = value;
+					return true;
+				};
+
+				function top_warenkorb_layer_resize(height) {
+					if (!isNaN(height))
+						document.getElementById('iframe_warenkorb').style.height = height + 'px';
+				};
+
+			</script>
+			<!-- /WK-Layer -->
+			<!-- Suche und WK -->
+			<div id="journal_head_search" class="journal_head_search">
+				<div id="warenkorb_layer" class="top_warenkorb_layer" style="display: none;">
+					<div style="line-height: 0px;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/wrk_layer_top.png" alt="Warenkorb-Hinweis" height="24" width="350"></div>
+					<div style="background-image: url('/images/wrk_layer_bg.png'); padding-left: 10px; padding-right: 10px;">
+						<a href="#" onclick="return(top_warenkorb_layer_close());" class="link_close">schliessen</a>
+						<iframe src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/warenkorb_layer_leer_002.html" name="iframe_warenkorb" id="iframe_warenkorb" style="width: 100%; height: 220px;" frameborder="0" width="100%"></iframe>
+					</div>
+					<div style="line-height: 0px;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/wrk_layer_bottom.png" alt="Warenkorb-Hinweis" height="11" width="350"></div>
+				</div>
+				<form name="suchform" method="post" action="/controller.aspx?cid=748&amp;detail=-1" onsubmit="if (document.suchform.search.value=='Suchbegriff eingeben...' || trim(document.suchform.search.value)=='') {return false;}">
+					<div id="journal_searchbox" class="journal_searchbox">
+						<input name="search" id="search" class="journal_search" value="Suchbegriff eingeben..." onfocus="if (this.value=='Suchbegriff eingeben...') {this.value=''}" onblur="if (this.value=='') {this.value='Suchbegriff eingeben...'}" maxlength="250" autocomplete="off" type="text">
+						<!--<div id="searchoutputbox" class="autocomplete"></div>-->
+					</div>
+					<div id="journal_search_los" class="journal_search_los">
+						<input id="journal_search_los_btn" class="journal_search_los_btn" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/los_button.png" alt="" type="image">
+					</div>
+				</form>
+				<div id="top_warenkorb" class="journal_head_warenkorb" onclick="location.href='/controller.aspx?cid=104&amp;amp;detail=1&amp;amp;detail2=1';">
+					Artikel:&nbsp;0&nbsp;&nbsp;&nbsp;Summe:&nbsp;0,00&nbsp;EUR
+				</div>
+			</div>
+			<!-- /Suche und WK -->
+
+			<!-- Content Schatten oben -->
+			<div id="journal_content_shadow_top" class="journal_content_shadow_top">
+				&nbsp;
+			</div>
+			<!-- /Content Schatten oben -->
+			<!-- Content -->
+			<div id="journal_content_shadow_middle" class="journal_content_shadow_middle">
+				<div id="journal_content_inner" class="journal_content_inner">
+					
+						<div id="journal_content_small" class="journal_content_small">
+					
+					<!-- Breadcrumbs -->
+					<div class="breadcrumbs">
+						Sie befinden sich hier: <a href="http://www.elv.de/journal">ELVjournal</a> » <a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=1&amp;detail2=246">Journal-Ausgabe 02/2012</a> » Roboter selbst bauen und programmieren – Roboterbausatz NIBObee » <a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=2&amp;detail2=1792">So funktionierts</a> » Mikrocontroller
+					</div>
+					<!-- /Breadcrumbs -->
+					<script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/js_functions_articledetail.js"></script><script type="text/javascript" language="JavaScript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/js_functions_rating.js"></script><script language="JavaScript">
+			var sku = "096726";
+			var article_id = "2012-02-11";
+			var product_id = sku.concat('-').concat(article_id);
+			var category = decodeEntities("Ausgabe 02/2012");
+			var product_name = decodeEntities("Roboter selbst bauen und programmieren – Roboterbausatz NIBObee");
+			var product_price = "0.99";
+			var econdawarengruppenpfad = 'Sonderartikel / Journal';
+		</script><script language="JavaScript">
+			emospro.ec_Event = [
+			['view',product_id,product_name,product_price,econdawarengruppenpfad,'1','Standard','68','NULL']
+			];
+		</script><a name="journal_top" id="journal_top"></a><h1 style="border: 0; padding: 0;">Roboter selbst bauen und programmieren – Roboterbausatz NIBObee</h1><div class="star_rating"><div id="div_JOURNAL_38050" style="position: absolute; margin-top: 24px; margin-left: -30px; background: url(/images/layer_orange.png) no-repeat; width: 206px; height: 70px;display: none;"><div style="padding-top: 20px; padding-right: 5px; text-align: right;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=38050" target="_top"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/bewertung_close.png" alt="schliessen" style="border: 0;"></a></div><div style="padding-left: 7px;"><iframe id="div_JOURNAL_38050_iframe" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/warenkorb_layer_leer_002.html" style="width: 190px; height: 30px; border: 0;" border="0" frameborder="0"></iframe></div></div><div class="star_rating" onclick="top.location.href='/controller.aspx?cid=746&amp;oldcid=726&amp;olddetail=38050&amp;olddetail2=&amp;oldsearch=1';"><div id="div_JOURNAL_38050_imgdiv" style="width: 120px; overflow: hidden;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/sterne_new100.png" alt="5,00" title="5,00"></div></div></div><div class="journalinfos">
+				Aus ELVjournal <a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=1&amp;detail2=246">02/2012</a>
+				&nbsp;&nbsp;&nbsp;
+				<a class="journal_link" onclick="window.scrollTo(0, document.getElementById('a_journal_kommentare').offsetTop);">2&nbsp;Kommentare
+					</a></div><div class="clearer" style="border-bottom: solid 1px #DCDCDC; padding-top: 10px; margin-bottom: 15px;"></div><div class="journal_head_picturebox"><div class="box_lo"></div><div class="box_o"><div class="box_ro"></div></div><div class="box_inner"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/2012_02_11_nibobee_kopfbild.jpg" alt="" border="0" width="550"></div><div class="box_lu"></div><div class="box_u"><div class="box_ru"></div></div></div><div class="journal_bildrahmen"><div class="picframe"><div id="div_article_pic"><table style="width: 246px; height: 254px; overflow: hidden;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="middle"><div style="text-align: center;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/2012_02_11_nibobee_pcb01_002.jpg" id="article_pic" alt=" Roboter selbst bauen und programmieren – Roboterbausatz NIBObee" style="margin: 0; padding: 0; border: 0;" width="238"></div><div id="article_pic_title"></div></td></tr></tbody></table></div><div id="div_article_video"><div id="article_pic_title"></div></div></div><div class="picframe_control"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td align="center" width="18"><img id="left_slider_1" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/button_scroll_left.png" alt="" onmouseover="scroll('1', 'left')" onmouseout="scroll_stop()" style="display: none;" height="43" width="10"></td><td width="246"><div id="slider_1" class="slider"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><div class="item" onclick="return(openPicPopup(38050, 956669))" style="margin-right: 0px; "><table style="width: 58px; height:58px; overflow: hidden;"><tbody><tr><td align="center" valign="middle"><a href="http://www.elv.de/module/produktkatalog01/bilder_popup.aspx?art_id=38050&amp;bild_id=956669" target="_blank" onclick="return(openPicPopup(38050, 956669))"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/2012_02_11_nibobee_pcb01.jpg" alt="" title="" onmouseover="
+																				showPic('http://www.elv-downloads.de/bilder/journal/2012_02/11//normalneu/2012_02_11_nibobee_pcb01.jpg', '')
+																			" height="56" border="0" width="56"></a></td></tr></tbody></table></div></td></tr></tbody></table></div></td><td align="center" width="18"><img id="right_slider_1" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/button_scroll_right.png" alt="" onmouseover="scroll('1', 'right')" onmouseout="scroll_stop()" style="display: none;" height="43" width="10"></td></tr></tbody></table></div></div><div id="journal_index" class="journal_index" style=" float: right; margin-top: 20px; margin-bottom: 10px; width: 278px;"><div class="box_lo"></div><div class="box_o"><div class="box_ro"></div></div><div class="box_inner"><script type="text/javascript">
+					function scrolltoelement(elementID) {
+						window.scrollTo(0, document.getElementById(elementID).offsetTop);
+						return false;
+					}
+				</script><h4>Inhalt des Fachbeitrags</h4><ul class="bullet_orange text"><li><a href="#KAT630169" onclick="return scrolltoelement('KAT630169');">Roboter praktisch</a></li><li><a href="#KAT630173" onclick="return scrolltoelement('KAT630173');">Konsequent einsteigerfreundlich</a></li><li><a href="#KAT630175" onclick="return scrolltoelement('KAT630175');">Die Programmierumgebung</a></li><li><a href="#KAT630176" onclick="return scrolltoelement('KAT630176');">Erster Schritt – Löten!</a></li><li><a href="#KAT630180" onclick="return scrolltoelement('KAT630180');">Erste Programmierschritte mit Anleitung</a></li><li><a href="#KAT630188" onclick="return scrolltoelement('KAT630188');">Weiterbauen!</a></li></ul></div><div class="box_lu"></div><div class="box_u"><div class="box_ru"></div></div></div><div style="float: right; clear: right;"><a class="button32_links_orange_unten" title="PDF- / Onlineversion herunterladen" href="#kaufen" onclick="window.scrollTo(0, document.getElementById('a_journal_kaufen').offsetTop);return false;"><span>PDF- / Onlineversion herunterladen</span></a></div><div class="clearer"></div><div class="clearer"></div><br><span class="text">Kleine
+ Roboter selbst programmieren – das liegt im Trend, lassen sich doch so 
+spielerisch Erfahrungen bei der Programmierung von Mikrocontrollern 
+sammeln, die unmittelbar anwendbar sind. Nicht zuletzt das stark 
+ausgeweitetete ELV-Angebot zu Roboter-Bausätzen und entsprechender 
+Literatur zeugt von stark wachsender Beliebtheit des Themas. Meist ist 
+der Roboter dazu als Fahrroboter ausgeführt, diese Ausführung ist 
+besonders einfach steuerbar und bietet natürlich sofort hervorragende 
+Möglichkeiten für die Programmierung einer Steuerung. nicai-systems 
+bietet mit dem NIBObee einen besonders interessanten Roboterbausatz an –
+ hier steht vor der ersten Fahrt der komplette Aufbau des Roboters.</span><br><br><div class="beitrag_abschnitte"><a name="KAT630169" id="KAT630169"></a><div style="float: right;"><a href="#journal_top" onclick="return scrolltoelement('journal_top');">zum Seitenanfang</a></div><h2>Roboter praktisch</h2><span class="text">nicai-systems,
+ eine kleine Firma aus Stolberg in der Nähe von Aachen, hat es sich vor 
+einigen Jahren zum Ziel gesetzt, frei programmierbare, mobile Roboter zu
+ entwickeln, die es vor allem jungen Leuten, also Schülern, 
+Auszubildenden und Studierenden, einfach machen sollte, in die 
+praktische Mikrocontrollerprogrammierung einzusteigen. Ein Breadboard 
+mit einer μC-Schaltung oder eine einfache Experimentierplatine wie etwa 
+das myAVR-System, der sich als erstaunlich vielseitig nutzbar erweisende
+ Ping-Pong-Bausatz von Franzis oder aber die Arduinos sind eine feine 
+Sache – dennnoch hat etwas, was zum Schluss agiert, bei dem man Mess-, 
+Steuer- und Regelungstechnik unmittelbar anwenden kann, eine hohe 
+Faszination. Symptomatisch sind dabei immer wieder in der Vergangenheit 
+Fahrroboter- Projekte wie der P!MOT oder der (noch aktuelle) ASURO 
+gewesen – man konnte eben sofort komplexe Steuer- und Regeltechnik live 
+erleben, sehen, wie sich Programmierfehler auswirken, usw. Und diese Art
+ des Roboters, der intelligent und autonom agiert, findet sich auch in 
+zunehmender Zahl in der wirtschaftlichen Praxis – vom selbstfahrenden 
+Containertransporter im Hafen bis zum selbst einparkenden Pkw, dem 
+autonom dem Postboten folgenden Paketauto oder aber dem Service-Roboter 
+in Krankenhaus und Altenpflege.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630170" id="KAT630170"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_007.jpeg" alt="Bild 1: Vorbild: die Industrie. Mit solchen, der Realität nachgebildeten Industrierobotermodellen kann man komplexe Programmierabläufe für Produktionsroboter lernen. Quelle: AREXX" title="Bild 1: Vorbild: die Industrie. Mit solchen, der Realität nachgebildeten Industrierobotermodellen kann man komplexe Programmierabläufe für Produktionsroboter lernen. Quelle: AREXX" onclick="window.open('/journal_pic.aspx?id=630170&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild
+ 1: Vorbild: die Industrie. Mit solchen, der Realität nachgebildeten 
+Industrierobotermodellen kann man komplexe Programmierabläufe für 
+Produktionsroboter lernen. Quelle: AREXX</td></tr></tbody></table></div><span class="text">Auch
+ die frei programmierbaren Industrieroboter, die es inzwischen auch 
+schon als Lernmodell (Bild 1) [1] gibt, haben eine hohe Faszination für 
+den, der sich mit Mikrocontroller-Programmierung beschäftigt. Doch 
+zurück zu nicai-systems. Der große Bruder des hier vorgestellten 
+NIBObee, der NIBO 2 (Bild 2) [2], ist ein erfolgreiches Objekt für 
+Ausbildung und Forschung.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630171" id="KAT630171"></a><div class="left" style="margin-left:0px; margin-right:0px;"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_004.jpeg" alt="Bild 2: Der große Bruder des NIBObee, der NIBO 2, ein bereits sehr komplex aufgebauter Bausatz, der u. a. mit einem beweglichen Distanzscanner (Bildmitte) aufgerüstet werden kann und hervorragend als autonomer Fahrroboter agieren kann (Bild rechts). Quelle: nicai-systems" title="Bild 2: Der große Bruder des NIBObee, der NIBO 2, ein bereits sehr komplex aufgebauter Bausatz, der u. a. mit einem beweglichen Distanzscanner (Bildmitte) aufgerüstet werden kann und hervorragend als autonomer Fahrroboter agieren kann (Bild rechts). Quelle: nicai-systems" onclick="window.open('/journal_pic.aspx?id=630171&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild
+ 2: Der große Bruder des NIBObee, der NIBO 2, ein bereits sehr komplex 
+aufgebauter Bausatz, der u. a. mit einem beweglichen Distanzscanner 
+(Bildmitte) aufgerüstet werden kann und hervorragend als autonomer 
+Fahrroboter agieren kann (Bild rechts). Quelle: nicai-systems</td></tr></tbody></table></div><span class="text"></span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630172" id="KAT630172"></a><span class="text">Er
+ ist sehr großzügig mit Mikrorechentechnik ausgestattet und kann so sehr
+ vielseitig eingesetzt werden. Mit zahlreichen Sensoren, u. a. einem 
+motorisch stellbaren Distanzsensor, kann er sich frei im Raum 
+orientieren und Fahraufgaben frei und intelligent erledigen – ohne 
+mechanische Fühler und ohne anzustoßen, herunterzufallen etc. Zusammen 
+mit dem optionalen Zubehör wie Programmieradapter, Grafikdisplay-Zusatz 
+und dem (genialen) Distanzscanner gerät das Ganze aber für normale 
+Jugendliche und Auszubildende schnell preislich aus dem Rahmen, hier 
+sind wohl eher Studierende sowie Bildungseinrichtungen die Zielgruppe 
+für dieses hochwertig mit SMD bestückte und robust ausgeführte 
+Robotermodell.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630173" id="KAT630173"></a><div style="float: right;"><a href="#journal_top" onclick="return scrolltoelement('journal_top');">zum Seitenanfang</a></div><h2>Konsequent einsteigerfreundlich</h2><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_009.jpeg" alt="Bild 3: Der NIBObee, ein preiswerter, mit zwei AVR-Prozessoren und zahlreichen Sensoren ausgestatteter, erweiterbarer Fahrroboter-Bausatz. Quelle: nicai-systems" title="Bild 3: Der NIBObee, ein preiswerter, mit zwei AVR-Prozessoren und zahlreichen Sensoren ausgestatteter, erweiterbarer Fahrroboter-Bausatz. Quelle: nicai-systems" onclick="window.open('/journal_pic.aspx?id=630173&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild
+ 3: Der NIBObee, ein preiswerter, mit zwei AVR-Prozessoren und 
+zahlreichen Sensoren ausgestatteter, erweiterbarer Fahrroboter-Bausatz. 
+Quelle: nicai-systems</td></tr></tbody></table></div><span class="text">Um
+ auch die o. a. Zielgruppen mit einem technisch ähnlich gelagerten 
+Modell bedienen zu können, entstand der kleine Bruder des NIBO 2, der 
+NIBObee (Bild 3) [3]. Der trifft in dieser Beziehung den Nagel auf den 
+Kopf: Für knapp 50 Euro erhält man einen wirklich kompletten Bausatz, 
+der, bis auf die Akkus, alles enthält, was man braucht: ein von der Pike
+ auf selbst aufzubauendes Modell, einsteigerfreundlich-konsequent in 
+bedrahteter Technik ausgeführt, mit zwei großzügig dimensionierten 
+Mikrocontrollern bestückt, dazu mit einer beachtlichen Grundausstattung 
+an verschiedenen Sensoren, integriertem USB-Programmer, der auch gleich 
+als Ladegerät für die Antriebsakkus dient. Um das Modell sofort in 
+Betrieb nehmen zu können, ist bereits ein Testprogramm im 
+Mikrocontroller enthalten, so kann man bereits vor dem ersten eigenen 
+Programm sicher sein, dass die Hardware komplett funktioniert.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630174" id="KAT630174"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_014.jpeg" alt="Bild 4: Das Herz des NIBObee: ein ATmega16 als Hauptprozessor und ein ATtiny44 als USB- und Ladecontroller. Quelle: nicai-systems" title="Bild 4: Das Herz des NIBObee: ein ATmega16 als Hauptprozessor und ein ATtiny44 als USB- und Ladecontroller. Quelle: nicai-systems" onclick="window.open('/journal_pic.aspx?id=630174&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild
+ 4: Das Herz des NIBObee: ein ATmega16 als Hauptprozessor und ein 
+ATtiny44 als USB- und Ladecontroller. Quelle: nicai-systems</td></tr></tbody></table></div><span class="text">Als
+ Hauptprozessor fungiert ein ATmega16 (Bild 4) mit 16 KB Flash-Speicher 
+und 1 KB SRAM, der mit einer Taktfrequenz von 15 MHz betrieben wird. Als
+ USB-Programmer/Akkulader ist ein ATtiny44 in das System implementiert. 
+Bereits in der Grundausstattung kann man sich mit zahlreichen Sensoren 
+an Bord beschäftigen: 4 Tastsensoren mit zwei mechanischen Fühlern, 2 
+Odometriesensoren (für die Antriebssteuerung zuständig) sowie ein 
+Liniensensor mit IR-LEDs und Phototransistoren bieten fürs Erste bereits
+ ein weites Betätigungsfeld. Über Erweiterungsports sind zahlreiche 
+Erweiterungen wie Hinderniserkennungen, RC5-Fernsteuer-Erweiterung oder 
+ein Grafikdisplay samt Bedientastern anschließbar. Darauf kommen wir 
+noch im Einzelnen. Dazu kommt noch ein vorprogrammiertes 
+Controller-Tuning-Kit, das noch mehr Speicher bietet.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630175" id="KAT630175"></a><div style="float: right;"><a href="#journal_top" onclick="return scrolltoelement('journal_top');">zum Seitenanfang</a></div><h2>Die Programmierumgebung</h2><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_012.jpeg" alt="Bild 5: Mehr als nur ein Treffpunkt der Roboter-Fans – Roboter.CC bietet eine besonders bedienfreundliche IDE samt Compiler und Online-Archiv für Projekte." title="Bild 5: Mehr als nur ein Treffpunkt der Roboter-Fans – Roboter.CC bietet eine besonders bedienfreundliche IDE samt Compiler und Online-Archiv für Projekte." onclick="window.open('/journal_pic.aspx?id=630175&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild
+ 5: Mehr als nur ein Treffpunkt der Roboter-Fans – Roboter.CC bietet 
+eine besonders bedienfreundliche IDE samt Compiler und Online-Archiv für
+ Projekte.</td></tr></tbody></table></div><span class="text">Unterstützt
+ wird das Projekt durch die Internetseite www.roboter.cc. Hier (Bild 5) 
+kann man für verschiedene Roboter-Plattformen Programmcodes in 
+unterschiedlichen Programmiersprachen (C/Java) erstellen, auf dem Server
+ compilieren lassen, das Hex-File herunterladen und dann auf den Roboter
+ übertragen. So kann man sich fürs Erste die Installation und das 
+Erlernen einer eigenen Entwicklungsumgebung sparen. Zudem trifft man 
+hier auf eine Community von Gleichgesinnten und findet zahlreiche 
+fertige Software-Projekte sowie alle Anleitungen zu den jeweiligen 
+Robotern, C-Tutorials usw. Es gibt auch auf der mitgelieferten CD-ROM 
+ein ausführliches Tutorial zum NIBObee, das Schritt für Schritt durch 
+die Installation und die Arbeit mit der Atmel-Programmierumgebung AVR 
+Studio und WinAVR (GCC, Libs und AVRDUDE) begleitet. Hierfür liefert 
+nicai- systems eine NIBObeelib mit, die C/C++-Routinen für die 
+Ansteuerung des Roboters, Treiber, Sensor-Kalibrierprogramme, 
+Beispielprogramme und einen Programmer für die Datenübertragung auf den 
+Roboter enthält. Somit ist für maximale Unterstützung gerade des 
+Einsteigers gesorgt.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630176" id="KAT630176"></a><div style="float: right;"><a href="#journal_top" onclick="return scrolltoelement('journal_top');">zum Seitenanfang</a></div><h2>Erster Schritt – Löten!</h2><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_002.jpeg" alt="Bild 6: Vor dem Programmieren kommt das Löten – ein Teil des NIBObee-Bausatzes in der Übersicht." title="Bild 6: Vor dem Programmieren kommt das Löten – ein Teil des NIBObee-Bausatzes in der Übersicht." onclick="window.open('/journal_pic.aspx?id=630176&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 6: Vor dem Programmieren kommt das Löten – ein Teil des NIBObee-Bausatzes in der Übersicht.</td></tr></tbody></table></div><span class="text">Auf
+ keine andere Weise lernt man seinen Roboter besser kennen: selbst 
+aufbauen! Dafür kommt der NIBObee sauber in Einzelteilen, in unzähligen 
+Tütchen verpackt, ins Haus. Bild 6 zeigt nur einen Teil der weit über 
+100 Bauteile. Vorab sei gesagt: perfekt bis ins Detail! Es fehlt nichts.
+ Die große Grundplatine kommt mit zahlreichen kleinen, abzubrechenden 
+Platinen daher, diese dienen später als Sensor- und 
+Zusatzbaugruppenträger sowie als Getriebegehäuse. Denn alle mechanischen
+ Halterungen und Träger am NIBObee bestehen aus Platinenmaterial – der 
+gesamte Roboter wird ohne eine Schraube zusammengebaut, nur gelötet – 
+genial! Eine der Abbrech-Platinchen bleibt übrig – nicht wegwerfen, sie 
+ist mit Auskerbungen und Bohrungen für das Biegen der Bauteilanschlüsse 
+und Transistorbeine versehen und dient so als Biegelehre.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630177" id="KAT630177"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic.jpeg" alt="Bild 7: Alle Platinen sind bestückt, hier sind zur Demonstration auch schon die ICs aufgesteckt." title="Bild 7: Alle Platinen sind bestückt, hier sind zur Demonstration auch schon die ICs aufgesteckt." onclick="window.open('/journal_pic.aspx?id=630177&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 7: Alle Platinen sind bestückt, hier sind zur Demonstration auch schon die ICs aufgesteckt.</td></tr></tbody></table></div><span class="text">Das
+ Bestücken der Platinen macht Spaß. Nicht nur, weil alles da ist und 
+sauber passt, auch die Anleitung ist hervorragend, gibt dazu dem 
+Elektronik-Einsteiger viele Tipps, so kann man etwa nebenher die 
+Identifizierung von Widerständen anhand des Farbcodes erlernen. In Bild 7
+ sieht man alle bestückten Platinen, jetzt ist der Roboter fertig zum 
+Zusammenbau. Die kleine Platine rechts trägt den Liniensensor, die vier 
+anderen die Odometriesensoren. Sie bilden gleichzeitig die 
+Getriebegehäuse, wie wir noch sehen werden. Hier sind auch schon der 
+Kasten für die Akkus und die ICs bestückt. Apropos Akkus: Es dürfen 
+später im Betrieb keine 1,5-V-Batterien verwendet werden, die Schaltung 
+ist für den Betrieb mit max. 5 V ausgelegt.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630178" id="KAT630178"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_010.jpeg" alt="Bild 8: Der Schaltungsausschnitt aus der NIBObee-Schaltung zeigt die Spannungsversorgung und den USB-Anschluss samt USB- und Ladeprozessor." title="Bild 8: Der Schaltungsausschnitt aus der NIBObee-Schaltung zeigt die Spannungsversorgung und den USB-Anschluss samt USB- und Ladeprozessor." onclick="window.open('/journal_pic.aspx?id=630178&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild
+ 8: Der Schaltungsausschnitt aus der NIBObee-Schaltung zeigt die 
+Spannungsversorgung und den USB-Anschluss samt USB- und Ladeprozessor.</td></tr></tbody></table></div><span class="text">Bild
+ 8 zeigt einen Schaltungsausschnitt dazu, es befindet sich kein 
+DC/DC-Wandler an Bord! Der Akkubetrieb hat auch den Vorteil geringerer 
+Betriebskosten, die Akkus sind dazu komfortabel über den USB-Port 
+wiederaufladbar. Ist die Bestückung erfolgreich verlaufen, erfolgt das 
+Einsetzen des Sensorträgers auf der Vorderseite sowie der 
+Getriebe-Motor-Einheiten. Diese bestehen tatsächlich, neben den 
+benötigten Getriebeteilen und den Motoren, allein jeweils aus drei 
+Platinenteilen. Diese sind so geschickt gestaltet, dass man sie recht 
+einfach und ohne große Mengen an ohnehin dann zu weichem Lötzinn zu 
+einem Getriebegehäuse zusammenlöten kann. Das Verlöten erfolgt durch 
+geschickte Nutzung der Kapillarwirkung, so dass die Teile hinterher 
+quasi „verschweißt“ sind. Deshalb muss man allerdings auch auf exakt 
+senkrechten bzw. parallelen Stand aller Platinen zueinander achten, 
+sonst klemmt das Getriebe und man erhält einen zumindest schwergängigen 
+Motorlauf. Denn das Zerlegen des einmal verlöteten Getriebegehäuses 
+gestaltet sich nicht ganz einfach. Hier ist der im Vorteil, der über 
+eine Heißluftstation mit feiner Heißluftdüse verfügt, um die Lötstellen 
+gezielt und punktuell wieder lösen zu können, ohne Zahnräder etc. zu 
+beschädigen. Exaktes Arbeiten und Kontrolle der Freigängigkeit des 
+Getriebes während des Lötens zahlt sich also aus.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630179" id="KAT630179"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_003.jpeg" alt="Bild 9: Unser fertig aufgebauter Roboterbausatz" title="Bild 9: Unser fertig aufgebauter Roboterbausatz" onclick="window.open('/journal_pic.aspx?id=630179&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 9: Unser fertig aufgebauter Roboterbausatz</td></tr></tbody></table></div><span class="text">Nach
+ dem Einbau der Fühler für die Tastsensoren und Einsetzen aller 
+Schaltkreise in die Fassungen kann man dank der bereits auf dem AVR 
+vorhandenen Testsoftware sofort einen ersten Funktionstest der Antriebe 
+und des Liniensensors sowie der Tastsensoren anhand der LEDs auf dem 
+Bord und der Reaktionen des Antriebs testen. Verläuft dieser Test 
+erfolgreich, ist nur noch die kleine Kunststoffhalbkugel auf der 
+Unterseite der Platine anzukleben, Sie dient als „Vorderachse“ des 
+Fahrroboters. Bild 9 zeigt den so fertig aufgebauten Roboter. Dann kann 
+es an das Programmieren, Testen und die ersten Fahrmanöver des NIBObee 
+gehen!</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630180" id="KAT630180"></a><div style="float: right;"><a href="#journal_top" onclick="return scrolltoelement('journal_top');">zum Seitenanfang</a></div><h2>Erste Programmierschritte mit Anleitung</h2><span class="text">Die
+ Programmierung des NIBObee erfolgt in C/C++, aber auch das 
+Programmieren via Java ist möglich. Wie bereits erwähnt, gibt es zwei 
+Möglichkeiten hierzu. Die eine, nennen wir sie die klassische Variante, 
+ist die über die originäre Atmel-Entwicklungsumgebung (IDE) AVR Studio 
+in Zusammenarbeit mit WinAVR. Über eine auf der mitgelieferten CD-ROM zu
+ installierende eigenständige Programmer-Software, den „NIBObee 
+Programmer“, kann die fertige Hex-Datei via USB sehr einfach auf den 
+Roboter übertragen werden. Man muss sich also erst einmal nicht mit 
+ISP-Schnittstellen, Seriell-USB-Umsetzung u. Ä. beschäftigen.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630181" id="KAT630181"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_015.jpeg" alt="Bild 10: Mittels des NIBObee-Programmers werden die per AVR-Studio-IDE erzeugten Daten an den Roboter übertragen." title="Bild 10: Mittels des NIBObee-Programmers werden die per AVR-Studio-IDE erzeugten Daten an den Roboter übertragen." onclick="window.open('/journal_pic.aspx?id=630181&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 10: Mittels des NIBObee-Programmers werden die per AVR-Studio-IDE erzeugten Daten an den Roboter übertragen.</td></tr></tbody></table></div><span class="text">Hat
+ man neben der NIBObeelib (die übrigens in jedem Falle zu installieren 
+ist, sie enthält u. a. den USB-Treiber des Roboters) den Programmer 
+installiert, kann man sofort die mitgelieferten und fertig compilierten 
+Programmbeispiele auf den Roboter übertragen (Bild 10) und so z. B. den 
+Liniensensor kalibrieren. Wer bereits AVRDude auf seinem Rechner 
+installiert hat, kann auch diese Programmer-Software am NIBObee nutzen.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630182" id="KAT630182"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_018.jpeg" alt="Bild 11: Die kostenlos bei Atmel erhältliche Standard-Programmierumgebung AVR Studio in Aktion mit einem NIBObee-Demoprogramm." title="Bild 11: Die kostenlos bei Atmel erhältliche Standard-Programmierumgebung AVR Studio in Aktion mit einem NIBObee-Demoprogramm." onclick="window.open('/journal_pic.aspx?id=630182&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 11: Die kostenlos bei Atmel erhältliche Standard-Programmierumgebung AVR Studio in Aktion mit einem NIBObee-Demoprogramm.</td></tr></tbody></table></div><span class="text">Dann
+ kann es an die ersten eigenen C-Projekte gehen. Schritt für Schritt 
+führt das Tutorial den Einsteiger in das Anlegen eines neuen Projektes 
+ein, bis schließlich der erste Code in der IDE steht (Bild 11). Ist der 
+compiliert, wird er mittels der Programmer-Software auf den Roboter 
+übertragen. Übrigens lohnt es sich, ab und an in die Download-Sektion 
+von nicai-systems zu sehen, auf der Open-Source-Seite „sourceforge.net“ 
+gibt es von Zeit zu Zeit eine neue NIBObeelib. Das Tutorial kann zwar 
+keinen C-Kurs ersetzen, jedoch sind die ersten Programmbeispiele anhand 
+der Quellcodes ausführlich erläutert und viele grundlegende 
+C-Programm-Bestandteile wie Präprozessor-Anweisungen, init main, while, 
+Klammern, Konstanten, Zustandsautomat usw. erklärt. Damit und mit einem 
+C-Kurs, den man sehr leicht im Internet findet, kann man bereits die 
+ersten einfachen Programme schreiben. Die mitgelieferte 
+Programmbeispielsammlung gipfelt bereits in eindrucksvollen Anwendungen 
+wie Hinderniserkennung und Fahrt entlang einer Linie. Die zweite 
+Möglichkeit, der „Robotik Online Code Compiler“ (Roboter.CC, Bild 5), 
+erinnert etwas an die IDE des Arduino-Projekts.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630183" id="KAT630183"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_006.jpeg" alt="Bild 12: RoboDude sorgt für das Programmieren der Xhex-Pakete aus der Roboter.CC-Plattform auf den NIBObee." title="Bild 12: RoboDude sorgt für das Programmieren der Xhex-Pakete aus der Roboter.CC-Plattform auf den NIBObee." onclick="window.open('/journal_pic.aspx?id=630183&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 12: RoboDude sorgt für das Programmieren der Xhex-Pakete aus der Roboter.CC-Plattform auf den NIBObee.</td></tr></tbody></table></div><span class="text">Allerdings
+ muss man hier noch eine spezielle Programmer-Software herunterladen, 
+das Open-Source Projekt „RoboDude“, und neben der NIBObeelib 
+(USB-Treiber!) auf dem PC installieren (Bild 12). Denn der Compiler von 
+Roboter.CC erzeugt ein XML-basiertes Hex-Format, in dem nicht nur das 
+klassische Hex-Programmfile selbst untergebracht ist, sondern auch alle 
+weiteren Informationen wie Fuse-Bit-Definitionen, EEPROM-Daten, 
+Mikrocontroller-Informationen und solche zum Zielsystem. Der 
+RoboDude-Programmer „sortiert“ diese Informationen wieder aus dem Paket 
+und schickt sie nach Norm in das Zielsystem. Die bereits im Tutorial in 
+Zusammenarbeit mit der AVR-Studio-IDE besprochenen Testprogramme finden 
+sich auch hier im Roboter.CC wieder. Man kann sie, ebenso wie weitere 
+öffentliche Programme, einfach in die IDE laden, ansehen und als 
+fertiges Xhex-, Hex- und Quellcode-File herunterladen. Hier finden sich 
+sowohl Programme anderer NIBObee- Besitzer als auch solche von 
+nicai-systems, etwa zu den Erweiterungsbausteinen des Roboters, auf die 
+wir noch etwas näher eingehen werden.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630184" id="KAT630184"></a><span class="text">Meldet
+ man sich als Mitglied der Community auf der Plattform an, kann man 
+sofort mit dem Erstellen eigener Programme beginnen. Einfach ein neues 
+Projekt anlegen, die gewünschten Einstellungen (Bild 13) vornehmen und 
+den Code in die IDE schreiben (Bild 14).</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630185" id="KAT630185"></a><div class="left"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_016.jpeg" alt="Bild 13: Die Einstellungen für das eigene Projekt" title="Bild 13: Die Einstellungen für das eigene Projekt" onclick="window.open('/journal_pic.aspx?id=630185&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 13: Die Einstellungen für das eigene Projekt</td></tr></tbody></table></div><span class="text"></span></div><div class="beitrag_abschnitte"><a name="KAT630186" id="KAT630186"></a><div class="left" style="margin-left:0px; margin-right:0px;"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_013.jpeg" alt="Bild 14: Das C-Programm wird einfach wie in einem normalen Programmeditor Zeile für Zeile geschrieben, die Farbmarkierungen werden automatisch vorgenommen je nach Anweisung, Kommentar usw." title="Bild 14: Das C-Programm wird einfach wie in einem normalen Programmeditor Zeile für Zeile geschrieben, die Farbmarkierungen werden automatisch vorgenommen je nach Anweisung, Kommentar usw." onclick="window.open('/journal_pic.aspx?id=630186&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild
+ 14: Das C-Programm wird einfach wie in einem normalen Programmeditor 
+Zeile für Zeile geschrieben, die Farbmarkierungen werden automatisch 
+vorgenommen je nach Anweisung, Kommentar usw.</td></tr></tbody></table></div><span class="text"></span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630187" id="KAT630187"></a><span class="text">Über
+ „Save &amp; compile“ wird der Code (hinter der IDE steckt übrigens der 
+Open-Source-Compiler „avrgcc“) compiliert, eventuelle Fehler und das 
+Ergebnis der Arbeit des Compilers gemeldet. Das Projekt wird unter dem 
+eigenen Log-in oder (wenn so definiert) als öffentliches Projekt 
+gespeichert und kann als Quellcode auch auf dem eigenen Computer per 
+ZIP-File gespeichert werden. Hat man es als nicht öffentlich deklariert,
+ ist es jederzeit nach erneutem Einloggen auch auf Roboter.CC wieder 
+zugänglich, kann auch nachträglich editiert, gelöscht oder 
+veröffentlicht werden. Insgesamt ist Roboter.CC als wirklich 
+interessante ballastfreie Alternative zur herkömmlichen 
+Programmierumgebung zu sehen, freilich mit einigen Grenzen, die aber nur
+ bei speziellen Programmanforderungen erreicht werden – eine tolle 
+Sache, die dem Ziel, Einsteiger an C oder auch Java heranzuführen, 
+wirklich sehr dienlich ist.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630188" id="KAT630188"></a><div style="float: right;"><a href="#journal_top" onclick="return scrolltoelement('journal_top');">zum Seitenanfang</a></div><h2>Weiterbauen!</h2><span class="text">Der
+ NIBObee ist ja bereits in der Grundausstattung mit zahlreichen Sensoren
+ bestückt – es geht aber noch mehr! Der Hersteller bietet dazu einiges 
+an Aufrüstmöglichkeiten. Das beginnt bei einer einfachen 
+Hinderniserkennung, geht weiter über eine aufsteckbare 
+Universalplattform (Bild 15), die als Träger für weitere Bauteil-Kits 
+oder eigene Schaltungen dient. Man kann ein Lauflicht (Bild 16) bauen, 
+es gibt ein Remote-Kit, das den Roboter über eine RC5-Fernbedienung 
+steuerbar macht, und ein Kit für die Hinderniserkennung (Bild 17).</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630189" id="KAT630189"></a><div class="left"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_011.jpeg" alt="Bild 15: Dient als Träger für die verschiedensten Experimente: die BXT9-Erweiterung." title="Bild 15: Dient als Träger für die verschiedensten Experimente: die BXT9-Erweiterung." onclick="window.open('/journal_pic.aspx?id=630189&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 15: Dient als Träger für die verschiedensten Experimente: die BXT9-Erweiterung.</td></tr></tbody></table></div><span class="text"></span></div><div class="beitrag_abschnitte"><a name="KAT630190" id="KAT630190"></a><div class="left"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_008.jpeg" alt="Bild 16: Basiert auf der BXT9-Erweiterung: LED-Lauflicht BKit1." title="Bild 16: Basiert auf der BXT9-Erweiterung: LED-Lauflicht BKit1." onclick="window.open('/journal_pic.aspx?id=630190&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 16: Basiert auf der BXT9-Erweiterung: LED-Lauflicht BKit1.</td></tr></tbody></table></div><span class="text"></span></div><div class="beitrag_abschnitte"><a name="KAT630191" id="KAT630191"></a><div class="left" style="margin-left:0px; margin-right:0px;"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_017.jpeg" alt="Bild 17: Fast-Rundumblick: Die Hinderniserkennung BKit2 im Einsatz auf dem NIBObee. Die gesamte Verkabelung liegt aus optischen Gründen unter der Platine." title="Bild 17: Fast-Rundumblick: Die Hinderniserkennung BKit2 im Einsatz auf dem NIBObee. Die gesamte Verkabelung liegt aus optischen Gründen unter der Platine." onclick="window.open('/journal_pic.aspx?id=630191&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild
+ 17: Fast-Rundumblick: Die Hinderniserkennung BKit2 im Einsatz auf dem 
+NIBObee. Die gesamte Verkabelung liegt aus optischen Gründen unter der 
+Platine.</td></tr></tbody></table></div><span class="text"></span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630192" id="KAT630192"></a><span class="text">Wem
+ Rechenleistung und Speicher irgendwann nicht mehr genügen, der kann zum
+ Tuning-Kit mit zwei leistungsfähigeren Prozessoren greifen. Highlight 
+des Zubehörs und I-Tüpfelchen bei der Aufrüstung des NIBObee ist sicher 
+die Grafikdisplay-Erweiterung (Bild 18).</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630193" id="KAT630193"></a><div class="left" style="margin-left:0px; margin-right:0px;"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_005.jpeg" alt="Bild 18: Steigert den Nutzwert des Fahrroboters enorm – die Grafikdisplay-Erweiterung BGX1." title="Bild 18: Steigert den Nutzwert des Fahrroboters enorm – die Grafikdisplay-Erweiterung BGX1." onclick="window.open('/journal_pic.aspx?id=630193&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 18: Steigert den Nutzwert des Fahrroboters enorm – die Grafikdisplay-Erweiterung BGX1.</td></tr></tbody></table></div><span class="text"></span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630194" id="KAT630194"></a><span class="text">Die
+ kostet zwar genauso viel wie der Roboter-Bausatz selbst, macht ihn aber
+ endgültig zum autonomen Gerät. Denn hier wirkt ein eigener AVR 
+(ATmega88, 8 MHz), der per eigener, integrierter Funktionsbibliothek 
+nicht nur das Display „bedient“ und die vier Tasten nebst Anzeige-LEDs 
+verwaltet. Er kommuniziert per Bus mit dem NIBObee-Prozessor und kann 
+diesen befehligen, Abfragen machen usw. So kann man etwa eine komplette 
+Bedienoberfläche kreieren, verschiedene, per Menü abrufbare Aufgaben für
+ den Roboter hinterlegen, Sensoren, z. B. Klimasensoren, abfragen, für 
+die rings um das Display noch Lochrasterflächen bereitstehen. Daneben 
+ist das Display-Kit auch als eigenständige AVR-Applikation betreibbar. 
+Wenn man also den NIBObee gerade nicht benutzt, „schiebt“ man eine 
+eigene Software auf den AVR und kann das Kit dann z. B. als kleine 
+Wetterstation an die Wand hängen.</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630195" id="KAT630195"></a><div class="right"><table border="0" cellpadding="0" cellspacing="0" width="10"><tbody><tr><td><img class="pointer" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/journal_pic_019.jpeg" alt="Bild 19: „Wallpaper“ mit Namensgeber – auch so etwas kann das kleine Grafikdisplay." title="Bild 19: „Wallpaper“ mit Namensgeber – auch so etwas kann das kleine Grafikdisplay." onclick="window.open('/journal_pic.aspx?id=630195&amp;size=1','Detailansicht','width=840, height=700')"><br></td></tr><tr><td class="text untertitel">Bild 19: „Wallpaper“ mit Namensgeber – auch so etwas kann das kleine Grafikdisplay.</td></tr></tbody></table></div><span class="text">Für
+ Show-Zwecke lassen sich sogar Grafiken auf das Display bringen (Bild 
+19), wie etwa der Namensgeber des kleinen Roboters mit den 
+charakteristischen Fühlern. Details zur Programmierung der Erweiterung 
+finden sich in der Wiki zu jedem Teil des Systems auf der Seite von 
+nicai-systems. Fazit der ersten Bekanntschaft mit dem NIBObee: mehr als 
+einer von vielen Modell-Robotern, eine perfekte Verbindung zwischen 
+Elektronik-Selbstbau, Lernen einer Programmiersprache und Bereitstellung
+ einer einfachen Programmierumgebung. Dazu kommen die umfangreichen 
+Ausbaumöglichkeiten und ein günstiger Preis, für den man auch kaum einen
+ solchen Fahrroboter „zu Fuß“ selbst bauen kann. Zumal man hier die 
+Erfolgsgarantie mitkauft!</span></div><div class="clearer"></div><div class="beitrag_abschnitte"><a name="KAT630196" id="KAT630196"></a><h4 class="subline">Weitere Infos:</h4><span class="text">[1] Metall-Roboterarm AREXX RA1-PRO, ELV-Best.-Nr. 68-10 18 28<br>[2] Roboterbausatz nicai-systems NIBO 2, ELV-Best.-Nr. 68-10 21 20<br>[3] Roboterbausatz nicai-systems NIBObee, ELV-Best.-Nr. 68-10 21 12<br>Alle Robotik-Bausätze finden Sie unter <a href="http://www.robotik.elv.de/">www.robotik.elv.de</a></span></div><div class="clearer"></div><div class="clearer"></div><a name="kaufen" id="a_journal_kaufen"></a><div style="margin-bottom: 20px;"><h4 class="subline">Fachbeitrag als PDF-Download herunterladen</h4><div class="box_lo"></div><div class="box_o"><div class="box_ro"></div></div><div class="box_inner" align="left"><div><div class="journal_kaufen_box_2"><h4>Gratis Downloads</h4><a href="http://www.elv-downloads.de/bilder/journal/2012_02/11/102112_roboter_nibobee.pdf" class="black"><b>Journalbericht
+												als PDF herunterladen
+											</b></a><br><br></div><div class="journal_kaufen_box_1"><h4>Inhalt</h4><span class="text">
+								Sie erhalten den Artikel in 1 Version:
+								<br><br><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/pfeil_pdf.png" alt="pdf" class="img_text_middle" border="0">&nbsp;&nbsp;<b>als PDF (6 Seiten)</b><br><br>
+								Sie erhalten folgende Artikel:
+								<br><ul><li><b>Roboter selbst bauen und programmieren – Roboterbausatz NIBObee</b></li></ul></span></div></div></div><div class="box_lu"></div><div class="box_u"><div class="box_ru"></div></div><div class="clearer"></div></div><script>
+				function reiter_anzeigen(id) {
+					
+						if(id=='bausatz') {
+							document.getElementById('reiter_bausatz').style.display='block';
+							document.getElementById('head_bausatz').className='tab_aktiv';
+						}
+						else {
+							document.getElementById('reiter_bausatz').style.display='none';
+							document.getElementById('head_bausatz').className='tab';
+						}
+					
+						if(id=='forum') {
+							document.getElementById('reiter_forum').style.display='block';
+							document.getElementById('head_forum').className='tab_aktiv';
+						}
+						else {
+							document.getElementById('reiter_forum').style.display='none';
+							document.getElementById('head_forum').className='tab';
+						}
+					
+				}
+			</script><div class="tabs_articledetail"><table class="head" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td id="head_bausatz" onclick="reiter_anzeigen('bausatz');" class="tab_aktiv">Produkte</td><td id="head_forum" onclick="reiter_anzeigen('forum');" class="tab">Foren</td><td class="ohne_tab" valign="bottom"><div></div></td></tr></tbody></table><div id="reiter_bausatz" class="content" style="display:block;"><div name="d_bausatz" class="frame_articlelist"><div class="inner" style="border-bottom: solid 1px #CFCFCF;"><form onsubmit="top_warenkorb_layer_open(this);" method="post" action="/controller.aspx?cid=74&amp;detail=50&amp;detail2=0" name="FORMWK_36890"><input name="ARTIKELNUMMER" value="102112" type="hidden"><input name="VORSCHALTNUMMER" value="68" type="hidden"><input name="BONUSZAHLUNG" value="0" type="hidden"><input name="HERKUNFT_DETAIL" value="" type="hidden"><input name="HERKUNFT_DETAIL2" value="" type="hidden"><input name="WARENGRUPPEN_ID" value="" type="hidden"><table border="0" cellpadding="0" cellspacing="0" width="100%"><colgroup><col width="110"><col width="*"><col width="130"><col width="135"></colgroup><tbody><tr><td rowspan="2" valign="top"><div class="thumbnail"><a href="http://www.elv.de/nicai-systems-roboterbausatz-nibobee.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'nicai systems Roboterbausatz NIBObee'])"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/102112_w06_nibobee.jpg" alt="" height="88" border="0" width="88"></a></div></td><td colspan="2"><h1><a href="http://www.elv.de/nicai-systems-roboterbausatz-nibobee.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'nicai systems Roboterbausatz NIBObee'])">nicai systems Roboterbausatz NIBObee</a></h1><h2><div style="float:left; margin-top:2px;"><a href="http://www.elv.de/nicai-systems-roboterbausatz-nibobee.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'nicai systems Roboterbausatz NIBObee'])">Artikel-Nr.:&nbsp;
+										68-10 21 12</a></div><div class="star_rating_klein" style="margin-left:10px;"><div style="width:80px;overflow:hidden;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/sterne_new100_klein.png" border="0"></div></div><br style="clear:both"></h2></td><td rowspan="2" valign="bottom"><div class="price">EUR 49,90*
+							</div><div class="wrk_button"><input src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/button_in_den_wk.png" type="image"></div></td></tr><tr><td style="padding-bottom: 3px;" valign="bottom"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding-left: 15px;" valign="bottom"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/lieferbar_24px.png" alt="" style="margin-right: 5px;" height="24" border="0" width="10"></td><td style="color:#000000;font-weight:bold;">sofort versandfertig</td></tr></tbody></table></td><td style="padding-bottom: 1px; padding-left: 15px;" valign="bottom" width="140"></td></tr></tbody></table></td><td class="menge" style="padding-right: 10px; padding-bottom: 5px;" align="right" valign="bottom"><label for="MENGE">Anzahl:</label><input value="1" id="MENGE" name="MENGE" type="text"></td></tr></tbody></table></form></div><div class="inner" style="border-bottom: solid 1px #CFCFCF;background-color: #F3F3F4;"><form onsubmit="top_warenkorb_layer_open(this);" method="post" action="/controller.aspx?cid=74&amp;detail=50&amp;detail2=0" name="FORMWK_36913"><input name="ARTIKELNUMMER" value="102120" type="hidden"><input name="VORSCHALTNUMMER" value="68" type="hidden"><input name="BONUSZAHLUNG" value="0" type="hidden"><input name="HERKUNFT_DETAIL" value="" type="hidden"><input name="HERKUNFT_DETAIL2" value="" type="hidden"><input name="WARENGRUPPEN_ID" value="" type="hidden"><table border="0" cellpadding="0" cellspacing="0" width="100%"><colgroup><col width="110"><col width="*"><col width="130"><col width="135"></colgroup><tbody><tr><td rowspan="2" valign="top"><div class="thumbnail"><a href="http://www.elv.de/nicai-systems-roboterbausatz-nibo-2.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'nicai systems Roboterbausatz Nibo 2'])"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/102120_w01_nibo.jpg" alt="" height="88" border="0" width="88"></a></div></td><td colspan="2"><h1><a href="http://www.elv.de/nicai-systems-roboterbausatz-nibo-2.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'nicai systems Roboterbausatz Nibo 2'])">nicai systems Roboterbausatz Nibo 2</a></h1><h2><div style="float:left; margin-top:2px;"><a href="http://www.elv.de/nicai-systems-roboterbausatz-nibo-2.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'nicai systems Roboterbausatz Nibo 2'])">Artikel-Nr.:&nbsp;
+										68-10 21 20</a></div><div class="star_rating_klein" style="margin-left:10px;"><div style="width:64px;overflow:hidden;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/sterne_new100_klein.png" border="0"></div></div><br style="clear:both"></h2></td><td rowspan="2" valign="bottom"><div class="price">EUR 114,95*
+							</div><div class="wrk_button"><input src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/button_in_den_wk.png" type="image"></div></td></tr><tr><td style="padding-bottom: 3px;" valign="bottom"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding-left: 15px;" valign="bottom"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/lieferbar_24px.png" alt="" style="margin-right: 5px;" height="24" border="0" width="10"></td><td style="color:#000000;font-weight:bold;">sofort versandfertig</td></tr></tbody></table></td><td style="padding-bottom: 1px; padding-left: 15px;" valign="bottom" width="140"></td></tr></tbody></table></td><td class="menge" style="padding-right: 10px; padding-bottom: 5px;" align="right" valign="bottom"><label for="MENGE">Anzahl:</label><input value="1" id="MENGE" name="MENGE" type="text"></td></tr></tbody></table></form></div><div class="inner" style=""><form onsubmit="top_warenkorb_layer_open(this);" method="post" action="/controller.aspx?cid=74&amp;detail=50&amp;detail2=0" name="FORMWK_36776"><input name="ARTIKELNUMMER" value="101828" type="hidden"><input name="VORSCHALTNUMMER" value="68" type="hidden"><input name="BONUSZAHLUNG" value="0" type="hidden"><input name="HERKUNFT_DETAIL" value="" type="hidden"><input name="HERKUNFT_DETAIL2" value="" type="hidden"><input name="WARENGRUPPEN_ID" value="" type="hidden"><table border="0" cellpadding="0" cellspacing="0" width="100%"><colgroup><col width="110"><col width="*"><col width="130"><col width="135"></colgroup><tbody><tr><td rowspan="2" valign="top"><div class="thumbnail"><a href="http://www.elv.de/arexx-metall-roboterarm-ra1-pro-bausatz.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'AREXX Metall-Roboterarm RA1-PRO Bausatz'])"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/101828_w01_arm.jpg" alt="" height="88" border="0" width="88"></a></div></td><td colspan="2"><h1><a href="http://www.elv.de/arexx-metall-roboterarm-ra1-pro-bausatz.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'AREXX Metall-Roboterarm RA1-PRO Bausatz'])">AREXX Metall-Roboterarm RA1-PRO Bausatz</a></h1><h2><div style="float:left; margin-top:2px;"><a href="http://www.elv.de/arexx-metall-roboterarm-ra1-pro-bausatz.html" onclick="_gaq.push(['_trackEvent', 'Suche', 'Artikelverweis', 'AREXX Metall-Roboterarm RA1-PRO Bausatz'])">Artikel-Nr.:&nbsp;
+										68-10 18 28</a></div><div class="star_rating_klein" style="margin-left:10px;"><div style="width:64px;overflow:hidden;"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/sterne_new100_klein.png" border="0"></div></div><br style="clear:both"></h2></td><td rowspan="2" valign="bottom"><div class="price">EUR 229,00*
+							</div><div class="wrk_button"><input src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/button_in_den_wk.png" type="image"></div></td></tr><tr><td style="padding-bottom: 3px;" valign="bottom"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding-left: 15px;" valign="bottom"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/lieferbar_24px.png" alt="" style="margin-right: 5px;" height="24" border="0" width="10"></td><td style="color:#000000;font-weight:bold;">sofort versandfertig</td></tr></tbody></table></td><td style="padding-bottom: 1px; padding-left: 15px;" valign="bottom" width="140"></td></tr></tbody></table></td><td class="menge" style="padding-right: 10px; padding-bottom: 5px;" align="right" valign="bottom"><label for="MENGE">Anzahl:</label><input value="1" id="MENGE" name="MENGE" type="text"></td></tr></tbody></table></form></div></div></div><div id="reiter_forum" class="content" style="display:none;"><div style="padding-top: 5px;"><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=7&amp;detail2=2047&amp;artid=38050" class="orange">Neuen Forenbeitrag schreiben</a></div></div></div><a name="kommentare" id="a_journal_kommentare"></a><br><h3>Kommentare:</h3><div class="journal_kommentare_outer" style="margin-left:0px;"><div class="box_lo"></div><div class="box_o"><div class="box_ro"></div></div><a name="kommentar_139"></a><div class="box_inner text"><span class="journal_kommentar_ueberschrift">25.09.2012 schrieb Christian:
+				</span><br>
+				„Diese Roboter Steuerungen dienen alle nicht meinem Zweck. 
+Ich bräuchte eine H-Schaltung (2 Drehrichtungen) für 1 leistungsstarken 
+Motor, dessen Ruder ähnlich einem Servo über Sensoren eine best. 
+Dezimalzahl zuweisend über eine einfache arithmet. Formel mit 2 od 3 
+Variablen einen präzisen Ausschlag ausführt. Diese bestimmte Zahl müßte 
+auch jederzeit auf einem Display sichtbar sein.”
+				<div id="antwort_link_139" class="journal_kommentar_antwort_link"><a onclick="document.getElementById('antwort_139').style.display='block';document.getElementById('antwort_link_139').style.display='none';">› antworten</a><br><span class="untertitel">(Anmeldung erforderlich)</span></div><div id="antwort_139" class="journal_kommentar_antwort"><form method="post" action="/controller.aspx?cid=726&amp;detail=38050#kommentare"><input name="valid" value="kommentar" type="hidden"><input name="parent" value="139" type="hidden"><input class="inptext" name="nick" disabled="disabled" type="text">&nbsp;&nbsp;Name
+						<br><input class="inptext" name="email" disabled="disabled" type="text">&nbsp;&nbsp;E-Mail
+						<br><textarea class="inptext" name="kommentar" disabled="disabled"></textarea><input class="inptext" value="absenden" disabled="disabled" type="submit"></form></div></div><div class="box_lu"></div><div class="box_u"><div class="box_ru"></div></div></div><div class="journal_kommentare_outer" style="margin-left:0px;"><div class="box_lo"></div><div class="box_o"><div class="box_ro"></div></div><a name="kommentar_159"></a><div class="box_inner text"><span class="journal_kommentar_ueberschrift">07.12.2012 schrieb Michael Sandhorst (Technik):
+				</span><br>
+				„Hallo Christian,
+
+wir können Ihnen aus unserem aktuellen Liefersortiment leider keinen Artikel anbieten, der u.g. Anwendungsprofil entspricht.
+
+Wir bedauern Ihnen keine andere Mitteilung machen zu können.
+
+Mit freundlichen Grüßen Michael Sandhorst (Technik)”
+				<div id="antwort_link_159" class="journal_kommentar_antwort_link"><a onclick="document.getElementById('antwort_159').style.display='block';document.getElementById('antwort_link_159').style.display='none';">› antworten</a><br><span class="untertitel">(Anmeldung erforderlich)</span></div><div id="antwort_159" class="journal_kommentar_antwort"><form method="post" action="/controller.aspx?cid=726&amp;detail=38050#kommentare"><input name="valid" value="kommentar" type="hidden"><input name="parent" value="159" type="hidden"><input class="inptext" name="nick" disabled="disabled" type="text">&nbsp;&nbsp;Name
+						<br><input class="inptext" name="email" disabled="disabled" type="text">&nbsp;&nbsp;E-Mail
+						<br><textarea class="inptext" name="kommentar" disabled="disabled"></textarea><input class="inptext" value="absenden" disabled="disabled" type="submit"></form></div></div><div class="box_lu"></div><div class="box_u"><div class="box_ru"></div></div></div><br><br><div class="box_lo"></div><div class="box_o"><div class="box_ro"></div></div><div class="box_inner"><b>Hinterlassen Sie einen Kommentar:</b><br><span class="untertitel">(Anmeldung erforderlich)</span><form method="post" action="/controller.aspx?cid=726&amp;detail=38050#kommentare"><input name="valid" value="kommentar" type="hidden"><input name="parent" value="0" type="hidden"><input class="inptext" name="nick" disabled="disabled" type="text">&nbsp;&nbsp;Name
+				<br><input class="inptext" name="email" disabled="disabled" type="text">&nbsp;&nbsp;E-Mail
+				<br><textarea class="inptext" name="kommentar" disabled="disabled"></textarea><input class="inptext" value="absenden" disabled="disabled" type="submit"></form></div><div class="box_lu"></div><div class="box_u"><div class="box_ru"></div></div>
+					
+						</div>
+					
+						<div id="journal_teaser" class="journal_teaser">
+							<script language="JavaScript" type="text/javascript">
+				function switchoc(elementnameoc) {
+					if (document.getElementById(elementnameoc).style.display=='none') {
+						document.getElementById(elementnameoc).style.display='inline';
+					}
+					else {
+						document.getElementById(elementnameoc).style.display='none';
+					}
+				}
+			</script><div class="teaser_head">
+				KATEGORIEN
+			</div><div id="journal_rubriken_navi" class="inner"><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=22" class="black navi_kategorien">ELVintern</a></h2></div><div id="navi_kategorien_22" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1798">
+					Fachbeiträge
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=24" class="black navi_kategorien">Experten testen</a></h2></div><div id="navi_kategorien_24" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1823">
+					Fachbeiträge
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=23" class="black navi_kategorien">Praxiswissen</a></h2></div><div id="navi_kategorien_23" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1802">
+					Fachbeiträge
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=25" class="black active navi_kategorien">So funktioniert´s</a></h2></div><div id="navi_kategorien_25" class="nav_level1_item" style="padding-bottom: 5px; border-bottom: 1px solid #605E64;"><a class="navi_kategorien active" href="http://www.elv.de/controller.aspx?cid=726&amp;detail=2&amp;detail2=1792">
+					Fachbeiträge
+				</a><div style="padding-left:20px;"><div class="nav_level1_item"><a href="http://www.elv.de/GrundlagenTabellen%C3%9Cbersichten/x.aspx/cid_748/detail_2038" class="">Grundlagen/Tabellen/Übersichten</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Audiotechnik/x.aspx/cid_748/detail_2039" class="">Audiotechnik</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Bauelemente/x.aspx/cid_748/detail_2040" class="">Bauelemente</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Energie-sparen/x.aspx/cid_748/detail_2041" class="">Energie sparen</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Freizeit/x.aspx/cid_748/detail_2042" class="">Freizeit</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Hausautomation/x.aspx/cid_748/detail_2043" class="">Hausautomation</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Kommunikation/x.aspx/cid_748/detail_2044" class="">Kommunikation</a></div><div class="nav_level1_item"><a href="http://www.elv.de/MedizinFitness/x.aspx/cid_748/detail_2045" class="">Medizin/Fitness</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Mikrocontroller/x.aspx/cid_748/detail_2047" class="active">Mikrocontroller</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Modellbau/x.aspx/cid_748/detail_2048" class="">Modellbau</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Multimedia/x.aspx/cid_748/detail_2049" class="">Multimedia</a></div><div class="nav_level1_item"><a href="http://www.elv.de/PCNetzwerk-Technik/x.aspx/cid_748/detail_2050" class="">PC/Netzwerk-Technik</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Sicherheitstechnik/x.aspx/cid_748/detail_2051" class="">Sicherheitstechnik</a></div><div class="nav_level1_item"><a href="http://www.elv.de/SoftwareLernpakete/x.aspx/cid_748/detail_2052" class="">Software/Lernpakete</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Stromversorgung/x.aspx/cid_748/detail_2053" class="">Stromversorgung</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Technik-f%C3%BCrs-Auto/x.aspx/cid_748/detail_2054" class="">Technik fürs Auto</a></div><div class="nav_level1_item"><a href="http://www.elv.de/TVVideoSAT/x.aspx/cid_748/detail_2055" class="">TV/Video/SAT</a></div><div class="nav_level1_item"><a href="http://www.elv.de/Umweltmessetechnik/x.aspx/cid_748/detail_2056" class="">Umweltmessetechnik</a></div></div></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=10" class="black navi_kategorien">Hausautomations-Systeme</a></h2></div><div id="navi_kategorien_10" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1822">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=10" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=10" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=2&amp;detail2=10" class="navi_kategorien">
+					Elektronikwissen
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=2" class="black navi_kategorien">Haustechnik</a></h2></div><div id="navi_kategorien_2" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1787">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=2" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=2" class="navi_kategorien">
+					Video
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=2" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=2&amp;detail2=2" class="navi_kategorien">
+					Elektronikwissen
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=2" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=8" class="black navi_kategorien">Beleuchtung</a></h2></div><div id="navi_kategorien_8" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1797">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=8" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=8" class="navi_kategorien">
+					Video
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=8" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=8" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=7" class="black navi_kategorien">Sicherheitstechnik</a></h2></div><div id="navi_kategorien_7" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1790">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=7" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=7" class="navi_kategorien">
+					Video
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=7" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=7" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=11" class="black navi_kategorien">Klima - Wetter - Umwelt</a></h2></div><div id="navi_kategorien_11" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1799">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=11" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=11" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=11" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=3" class="black navi_kategorien">Computer/Netzwerk</a></h2></div><div id="navi_kategorien_3" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1788">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=3" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=3" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=3" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=12" class="black navi_kategorien">Multimedia - Sat - TV</a></h2></div><div id="navi_kategorien_12" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=12&amp;kat=1">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=12" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=767&amp;detail=2&amp;detail2=12" class="navi_kategorien">
+					Video
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=12" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=2&amp;detail2=12" class="navi_kategorien">
+					Elektronikwissen
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=12" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=18" class="black navi_kategorien">Telefon - Kommunikation</a></h2></div><div id="navi_kategorien_18" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1796">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=18" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=18" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=2&amp;detail2=18" class="navi_kategorien">
+					Elektronikwissen
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=18" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=9" class="black navi_kategorien">Kfz-Technik</a></h2></div><div id="navi_kategorien_9" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1800">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=9" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=9" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=2&amp;detail2=9" class="navi_kategorien">
+					Elektronikwissen
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=9" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=13" class="black navi_kategorien">Batterien - Akkus - Ladegeräte</a></h2></div><div id="navi_kategorien_13" class="nav_level1_item" style="display:none;"><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=13" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=13" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=13" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=15" class="black navi_kategorien">Stromversorgung</a></h2></div><div id="navi_kategorien_15" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1793">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=15" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=15" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=2&amp;detail2=15" class="navi_kategorien">
+					Elektronikwissen
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=15" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=6" class="black navi_kategorien">Freizeit- und Outdoortechnik</a></h2></div><div id="navi_kategorien_6" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1791">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=6" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=6" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=2&amp;detail2=6" class="navi_kategorien">
+					Elektronikwissen
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=6" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=14" class="black navi_kategorien">Werkzeug - Löttechnik</a></h2></div><div id="navi_kategorien_14" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1844">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=14" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=14" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=14" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=16" class="black navi_kategorien">Messtechnik</a></h2></div><div id="navi_kategorien_16" class="nav_level1_item" style="display:none;"><a class="navi_kategorien" href="http://www.elv.de/controller.aspx?cid=748&amp;detail=1789">
+					Fachbeiträge
+				</a><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=16" class="navi_kategorien">
+					Foren
+				</a><a href="http://www.elv.de/controller.aspx?cid=752&amp;detail=2&amp;detail2=16" class="navi_kategorien">
+					Ratgeber
+				</a><a href="http://www.elv.de/controller.aspx?cid=758&amp;detail=2&amp;detail2=16" class="navi_kategorien">
+					Elektronikwissen
+				</a><a href="http://www.elv.de/controller.aspx?cid=824&amp;detail=2&amp;detail2=16" class="navi_kategorien">
+					FAQ
+				</a></div><div class="nav_level0_item"><h2 style="cursor:pointer; text-decoration:none;"><a href="http://www.elv.de/controller.aspx?cid=726&amp;detail=5&amp;detail2=19" class="black navi_kategorien">ELVjournal</a></h2></div><div id="navi_kategorien_19" class="nav_level1_item" style="display:none;"><a href="http://www.elv.de/controller.aspx?cid=834&amp;detail=6&amp;detail2=19" class="navi_kategorien">
+					Foren
+				</a></div></div><div class="nav"><div class="teaser_head">LESER IN AKTION</div><div class="inner"><a href="http://www.elv.de/leser-testen-journal.html" class="nav-level0 nav-level0-first">Leser testen</a><a href="http://www.elv.de/leserwettbewerb-journal-1.html" class="nav-level0">Leserwettbewerb</a></div></div><div class="nav"><div class="teaser_head">ARCHIV</div><div class="inner"><a href="http://www.elv.de/verzeichnis-der-fachbeitraege-journal-1.html" class="nav-level0 nav-level0-first">Verzeichnis der Fachbeiträge</a><a href="http://www.elv.de/archiv-der-elvjournale-journal-1.html" class="nav-level0">Archiv der ELVjournale</a><a href="http://www.elv.de/platinenfolien-journal-1.html" class="nav-level0">Platinenfolien</a></div></div>
+						</div>
+					
+				</div>
+				<div class="clearer"></div>
+			</div>
+			<!-- /Content -->
+			<!-- Content Schatten unten -->
+			<div id="journal_content_shadow_bottom" class="journal_content_shadow_bottom">
+				&nbsp;
+			</div>
+			<!-- /Content Schatten unten -->
+			<!-- Footer Navi -->
+			<div id="journal_footer" class="journal_footer">
+				<div class="navigation02"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="spalte1" valign="top"><ul><li><script type="text/javascript" language="javascript">
+							
+								function getPrintLink() {
+									var url = window.location.href; if (url.indexOf('x.aspx') > 0) { url = url + '/print_1'; } else if (url.indexOf('?') > 0) { url = url + '&amp;print=1'; } else { url = url + '?print=1'; }; return url;
+								};
+							
+							</script><a target="_blank" onclick="window.open(getPrintLink());">Druckversion</a></li><li><a href="http://www.elv.de/impressum-journal.html" class="navigation3">Impressum</a></li></ul></td><td class="spalte2" valign="top"><ul><li><a href="http://www.elv.de/nutzungsbedingungen-journal.html" class="navigation3">Nutzungsbedingungen</a></li><li><a href="http://www.elv.de/datenschutz-journal.html" class="navigation3">Datenschutz</a></li></ul></td><td class="spalte3" valign="top"></td><td class="spalte4" valign="top"></td></tr><tr><td colspan="4" class="spalte1"><div class="socialdetail"><a href="http://www.facebook.com/elvelektronik"></a><div class="socialprivacydetail"><ul class="social_share_privacy_area"><li class="facebook help_info"><span class="info">2
+ Klicks für mehr Datenschutz: Erst wenn Sie hier klicken, wird der 
+Button aktiv und Sie können Ihre Empfehlung an Facebook senden. Schon 
+beim Aktivieren werden Daten an Dritte übertragen – siehe <em>i</em>.</span><span class="switch off">nicht mit Facebook verbunden</span><div class="fb_like dummy_btn"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/dummy_facebook.png" alt="Facebook &quot;Like&quot;-Dummy" class="fb_like_privacy_dummy"></div></li><li class="gplus help_info"><span class="info">2
+ Klicks für mehr Datenschutz: Erst wenn Sie hier klicken, wird der 
+Button aktiv und Sie können Ihre Empfehlung an Google+ senden. Schon 
+beim Aktivieren werden Daten an Dritte übertragen – siehe <em>i</em>.</span><span class="switch off">nicht mit Google+ verbunden</span><div class="gplusone dummy_btn"><img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/dummy_gplus.png" alt="&quot;Google+1&quot;-Dummy" class="gplus_one_dummy"></div></li><li class="settings_info"><div class="settings_info_menu off"><a href="http://www.elv.de/Datenschutz/x.aspx/cid_547"><span class="help_info icon"><span class="info">Wenn
+ Sie diese Felder durch einen Klick aktivieren, werden Informationen an 
+Facebook, Twitter oder Google in die USA übertragen und unter Umständen 
+auch dort gespeichert. Näheres erfahren Sie durch einen Klick auf das <em>i</em>.</span></span></a><span style="cursor: pointer;" class="settings">Einstellungen</span><form><fieldset><div style="padding: 10px 0;"><strong>Dauerhaft aktivieren und Datenüber­tragung zustimmen:</strong></div><input name="perma_status_facebook" id="perma_status_facebook" type="checkbox"><label for="perma_status_facebook">Facebook</label><input name="perma_status_gplus" id="perma_status_gplus" type="checkbox"><label for="perma_status_gplus">Google+</label></fieldset></form></div></li></ul></div></div></td></tr></tbody></table></div><script type="text/javascript">
+	jQuery(document).ready(function($){
+	$(".socialprivacydetail").socialSharePrivacy({
+		services : {
+			facebook : 	{
+				'action'  : 'like',
+				'perma_option' : 'on'
+			},
+	        twitter : {
+	            'status' : 'off',
+				'perma_option' : 'off'
+	        },
+	        gplus : {
+	            'status' : 'on',
+				'perma_option' : 'on'
+	        }
+		},
+	    uri : function(context) {
+	        return $(context).parents(".socialdetail").find("a").attr("href");
+	    }
+		});
+	});
+	</script>
+			</div>
+			<!-- /Footer Navi -->
+		</div>
+		
+		<div id="login-overlay-bg" style="position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.6);z-index:1000;display:none"></div>
+		<div id="login-overlay" style="position: absolute; width: 450px; z-index: 1001; display: none; top: 97px; left: 282px;">
+			<div class="frame_gray">
+				<div class="head">Bitte geben Sie Ihr Passwort ein!<a id="login-overlay-close-button" style="cursor:pointer;float:right">schliessen <img src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/button_close.png" alt="schliessen" style="vertical-align:top"></a></div>
+				<div style="padding:5px 11px 10px 11px;background-color:#fff">
+					<form method="post" id="login-overlay-form" action="https://www.elv.de/login-registrieren.html">
+						<input id="returnurl" name="returnurl" value="" type="hidden">
+						<input name="bestelltyp" value="1" type="hidden">
+						Um sicherzustellen, dass Ihr Benutzerkonto z.B. an öffentlichen 
+Computern nicht von Fremden verwendet wird, geben Sie bitte Ihr 
+Benutzer-Passwort ein, um fortzufahren.
+						
+						<table style="margin-top:10px;width:100%" border="0" cellpadding="0" cellspacing="0">
+							<colgroup>
+								<col width="138">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>
+										Benutzername / E-Mail:
+									</td>
+									<td>
+										<input name="LOGINNAME" class="warenkorb_textfeld" style="width: 286px" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td style="line-height: 3px;" colspan="2" height="3">
+										<img alt="" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/spacer.gif">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Passwort:
+									</td>
+									<td>
+										<input value="" name="PASSWORT" class="warenkorb_textfeld" style="width: 286px" type="password">
+									</td>
+								</tr>
+								<tr>
+									<td style="line-height: 5px;" colspan="2" height="5">
+										<img alt="" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/spacer.gif">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<input alt="" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/wrk_step_21_anmelden.png" style="margin-top:10px;float:right" type="image">
+						<div style="clear:both"></div>
+					</form>
+				</div>
+				<div style="padding:5px 11px 10px 11px;background-color:#fff;border-top: 1px solid #ccc;">
+					<form method="post" action="https://www.elv.de/passwort-vergessen.html">
+						<strong>Passwort oder Benutzername vergessen?</strong>
+						<table style="margin-top:10px;width:100%" border="0" cellpadding="0" cellspacing="0">
+							<colgroup>
+								<col width="138">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>
+										E-Mail Adresse:
+									</td>
+									<td>
+										<input name="eingabedaten" class="warenkorb_textfeld" style="width: 286px" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td style="line-height: 3px;" colspan="2" height="3">
+										<img alt="" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/spacer.gif">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div style="float:right;margin-top:10px">
+							<input class="aktion" value="Kennwort anfordern" name="AENDERN" style="background-color: rgb(255, 255, 255); color: rgb(93, 93, 93);" type="submit"><input alt="" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/link_pfeil_grau.png" style="border: 0pt none ; vertical-align: middle; margin-left: 2px;" type="image">
+						</div>
+						<div style="clear:both"></div>
+					</form>
+				</div>
+				<div style="padding:5px 11px 10px 11px;background-color:#fff;border-top: 1px solid #ccc;">
+					<strong>Ist dies nicht ihr Konto?</strong>
+					<div style="float:right;margin-top:10px">
+						<input id="logout-text" onclick="document.location.href='/login-registrieren.html?detail=13'" class="aktion" value="Jetzt abmelden" name="AENDERN" style="background-color: rgb(255, 255, 255); color: rgb(93, 93, 93);" type="image"><input onclick="document.location.href='/login-registrieren.html?detail=13'" id="logout-image" alt="" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/link_pfeil_grau.png" style="border: 0pt none; vertical-align: middle; margin-left: 2px;" type="image">
+					</div>
+					<div style="clear:both"></div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-444430-7']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<script type="text/javascript" language="JavaScript">
+			if (typeof (window.emosPropertiesEvent) == 'function') {
+				window.emosPropertiesEvent(emospro);
+				//alert('emospro.content:' + emospro.content + '|' + 'emospro.siteid:' + emospro.siteid + '|' + 'emospro.countryid:' + emospro.countryid + '|' + 'emospro.langid:' + emospro.langid + '|' + 'emospro.pageId:' + emospro.pageId + '|' + 'emospro.orderProcess:' + emospro.orderProcess + '|' + 'emospro.search:' + emospro.search + '|' + 'emospro.event:' + emospro.ec_Event + '|' + 'emospro.billing:' + emospro.billing);
+			}
+		</script>
+		<script type="text/javascript" src="Roboter%20selbst%20bauen%20und%20programmieren%20%E2%80%93%20Roboterbausatz%20NIBObee%20%7C%20ELVjournal-Dateien/login-overlay.js"></script>
+	
+</body></html>

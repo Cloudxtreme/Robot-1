@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+<img src="http://192.168.1.121:9000/?action=stream" alt="">
+</body>
+</html>
