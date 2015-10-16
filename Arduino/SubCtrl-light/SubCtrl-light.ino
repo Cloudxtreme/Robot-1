@@ -15,6 +15,8 @@
 
 #include <TimerOne.h>
 #include <MsTimer2.h>
+#include <Wire.h>
+#include <EEPROM.h>
 
 #define PIN_RIGHT_HIGH_FRONT  12
 #define PIN_RIGHT_TURN_FRONT  13
@@ -39,8 +41,8 @@
 #define PIN_ROTATION_3       A2
 #define PIN_ROTATION_4       A3
 
-
-#define FLOAT_TRANS          5
+#define ROTATION_INTVAL     50
+#define ROTATION_FLOAT_TRANS          5
 
 #define ON   1
 #define OFF  0
@@ -59,10 +61,22 @@ volatile int ledFlashTurn_Rear = 0;
 volatile int ledBrake_Left = 0;
 volatile int ledBrake_Right = 0;
 
-int ledFlash2_Dir = 0;
-int ledFlash3_Pin = 0;
+volatile int ledRotationLight;
+volatile int ledRotationDir = 0;
+volatile int ledRotationState = 0;
 
 volatile int lighState;
+
+
+#define I2C_SLAVE_LIGHTS   0x0a
+#define I2C_BUF_SIZE         32
+
+volatile char i2cInBuf[I2C_BUF_SIZE];
+char i2cOutBuf[I2C_BUF_SIZE];
+volatile int i2cInIdx;
+
+int i2cSlaveAddr;
+
 
 //
 // ------------------ INTERRUPT HANDLING -------------------
@@ -92,91 +106,159 @@ void timerBrakes_Isr()
   }
 }
 
-void timer2_Isr()
+
+// ---------------------------------------------------------
+// receive all iic data
+// ---------------------------------------------------------
+
+void i2cReceive(int howMany)
+{
+  while( Wire.available() ) 
+  {
+    char c = Wire.read(); 
+    if( i2cInIdx < (I2C_BUF_SIZE - 1) )
+    {
+      i2cInBuf[i2cInIdx++] = c;
+    }
+  }
+  i2cInBuf[i2cInIdx] = '\0';
+  i2cInIdx = 0;
+}
+
+  
+// ---------------------------------------------------------
+// send response to calling part
+// ---------------------------------------------------------
+void i2cResponse( char* msg )
+{
+  sprintf(i2cOutBuf, "%s", msg);
+  Wire.write((uint8_t*) i2cOutBuf, strlen(i2cOutBuf)+1);   
+}
+
+
+// ---------------------------------------------------------
+// i2cRequest callback - triggered on incoming request
+// ---------------------------------------------------------
+void i2cRequest(void)
+{
+  char ctoken;
+  char xtoken;
+  static char responseBuffer[I2C_BUF_SIZE];
+  
+  if( strlen((char*) i2cInBuf) >= 2 )
+  {
+    if( i2cInBuf[0] == '%' )
+    {
+      Serial.println( (char*) i2cInBuf );
+      ctoken = i2cInBuf[1];
+      // i2cResponse((char*) responseBuffer);
+    }  
+    else
+    {
+      i2cResponse( "%?%err" );
+    }
+  }
+  else
+  {
+    i2cResponse( "%?%err" );
+  }    
+}
+
+
+
+void doRotationLight()
 {
 //
-  
-  switch(ledFlashTurn_Rear)
+  static long lastMillis = 0;
+
+  if( ledRotationState == ON )
   {
-    case PIN_ROTATION_1:
-      if( ledFlash2_Dir == CLOCKWISE )
+    if( (millis() - lastMillis ) >= ROTATION_INTVAL )
+    {
+      lastMillis = millis();
+      switch(ledRotationLight)
       {
-        digitalWrite(PIN_ROTATION_2, digitalRead(ledFlashTurn_Rear) );
-        delay(FLOAT_TRANS);
-        digitalWrite(ledFlashTurn_Rear, digitalRead(ledFlashTurn_Rear) ^ 1);
-        ledFlashTurn_Rear = PIN_ROTATION_2;
-      }
-      else
-      {
-        if( ledFlash2_Dir == CCLOCKWISE )
-        {
-          digitalWrite(PIN_ROTATION_4, digitalRead(ledFlashTurn_Rear) );
-          delay(FLOAT_TRANS);
-          digitalWrite(ledFlashTurn_Rear, digitalRead(ledFlashTurn_Rear) ^ 1);
-          ledFlashTurn_Rear = PIN_ROTATION_4;
-        }
-      }
-      break;
-    case PIN_ROTATION_2:
-      if( ledFlash2_Dir == CLOCKWISE )
-      {
-        digitalWrite(PIN_ROTATION_3, digitalRead(ledFlashTurn_Rear) );
-        delay(FLOAT_TRANS);
-        digitalWrite(ledFlashTurn_Rear, digitalRead(ledFlashTurn_Rear) ^ 1);
-        ledFlashTurn_Rear = PIN_ROTATION_3;
-      }
-      else
-      {
-        if( ledFlash2_Dir == CCLOCKWISE )
-        {
-          digitalWrite(PIN_ROTATION_1, digitalRead(ledFlashTurn_Rear) );
-          delay(FLOAT_TRANS);
-          digitalWrite(ledFlashTurn_Rear, digitalRead(ledFlashTurn_Rear) ^ 1);
-          ledFlashTurn_Rear = PIN_ROTATION_1;
-        }
-      }
-      break;
-    case PIN_ROTATION_3:
-      if( ledFlash2_Dir == CLOCKWISE )
-      {
-        digitalWrite(PIN_ROTATION_4, digitalRead(ledFlashTurn_Rear) );
-        delay(FLOAT_TRANS);
-        digitalWrite(ledFlashTurn_Rear, digitalRead(ledFlashTurn_Rear) ^ 1);
-        ledFlashTurn_Rear = PIN_ROTATION_4;
-      }
-      else
-      {
-        if( ledFlash2_Dir == CCLOCKWISE )
-        {
-          digitalWrite(PIN_ROTATION_2, digitalRead(ledFlashTurn_Rear) );
-          delay(FLOAT_TRANS);
-          digitalWrite(ledFlashTurn_Rear, digitalRead(ledFlashTurn_Rear) ^ 1);
-          ledFlashTurn_Rear = PIN_ROTATION_2;
-        }
-      }
-      break;
-    case PIN_ROTATION_4:
-      if( ledFlash2_Dir == CLOCKWISE )
-      {
-        digitalWrite(PIN_ROTATION_1, digitalRead(ledFlashTurn_Rear) );
-        delay(FLOAT_TRANS);
-        digitalWrite(ledFlashTurn_Rear, digitalRead(ledFlashTurn_Rear) ^ 1);
-        ledFlashTurn_Rear = PIN_ROTATION_1;
-      }
-      else
-      {
-        if( ledFlash2_Dir == CCLOCKWISE )
-        {
-          digitalWrite(PIN_ROTATION_3, digitalRead(ledFlashTurn_Rear) );
-          delay(FLOAT_TRANS);
-          digitalWrite(ledFlashTurn_Rear, digitalRead(ledFlashTurn_Rear) ^ 1);
-          ledFlashTurn_Rear = PIN_ROTATION_3;
-        }
-      }
-      break;
-    default:
-      break;
-  }
+        case PIN_ROTATION_1:
+          if( ledRotationDir == CLOCKWISE )
+          {
+            digitalWrite(PIN_ROTATION_2, digitalRead(ledRotationLight) );
+            delay(ROTATION_FLOAT_TRANS);
+            digitalWrite(ledRotationLight, digitalRead(ledRotationLight) ^ 1);
+            ledRotationLight = PIN_ROTATION_2;
+          }
+          else
+          {
+            if( ledRotationDir == CCLOCKWISE )
+            {
+              digitalWrite(PIN_ROTATION_4, digitalRead(ledRotationLight) );
+              delay(ROTATION_FLOAT_TRANS);
+              digitalWrite(ledRotationLight, digitalRead(ledRotationLight) ^ 1);
+              ledRotationLight = PIN_ROTATION_4;
+            }
+          }
+          break;
+        case PIN_ROTATION_2:
+          if( ledRotationDir == CLOCKWISE )
+          {
+            digitalWrite(PIN_ROTATION_3, digitalRead(ledRotationLight) );
+            delay(ROTATION_FLOAT_TRANS);
+            digitalWrite(ledRotationLight, digitalRead(ledRotationLight) ^ 1);
+            ledRotationLight = PIN_ROTATION_3;
+          }
+          else
+          {
+            if( ledRotationDir == CCLOCKWISE )
+            {
+              digitalWrite(PIN_ROTATION_1, digitalRead(ledRotationLight) );
+              delay(ROTATION_FLOAT_TRANS);
+              digitalWrite(ledRotationLight, digitalRead(ledRotationLight) ^ 1);
+              ledRotationLight = PIN_ROTATION_1;
+            }
+          }
+          break;
+        case PIN_ROTATION_3:
+          if( ledRotationDir == CLOCKWISE )
+          {
+            digitalWrite(PIN_ROTATION_4, digitalRead(ledRotationLight) );
+            delay(ROTATION_FLOAT_TRANS);
+            digitalWrite(ledRotationLight, digitalRead(ledRotationLight) ^ 1);
+            ledRotationLight = PIN_ROTATION_4;
+          }
+          else
+          {
+            if( ledRotationDir == CCLOCKWISE )
+            {
+              digitalWrite(PIN_ROTATION_2, digitalRead(ledRotationLight) );
+              delay(ROTATION_FLOAT_TRANS);
+              digitalWrite(ledRotationLight, digitalRead(ledRotationLight) ^ 1);
+              ledRotationLight = PIN_ROTATION_2;
+            }
+          }
+          break;
+        case PIN_ROTATION_4:
+          if( ledRotationDir == CLOCKWISE )
+          {
+            digitalWrite(PIN_ROTATION_1, digitalRead(ledRotationLight) );
+            delay(ROTATION_FLOAT_TRANS);
+            digitalWrite(ledRotationLight, digitalRead(ledRotationLight) ^ 1);
+            ledRotationLight = PIN_ROTATION_1;
+          }
+          else
+          {
+            if( ledRotationDir == CCLOCKWISE )
+            {
+              digitalWrite(PIN_ROTATION_3, digitalRead(ledRotationLight) );
+              delay(ROTATION_FLOAT_TRANS);
+              digitalWrite(ledRotationLight, digitalRead(ledRotationLight) ^ 1);
+              ledRotationLight = PIN_ROTATION_3;
+            }
+          }
+          break;
+        default:
+          break;
+      } // switch(ledRotationLight)
+    } // if( (millis() - LastMillis ) >= ROTATION_INTVAL )
+  } // if( ledRotationState == ON )
 }
 //
 // ---------------- END INTERRUPT HANDLING -----------------
@@ -235,8 +317,8 @@ void setup()
   ledBrake_Left = 0;
   ledBrake_Right = 0;
 
-  ledFlash2_Dir = OFF;
-  ledFlash3_Pin = OFF;
+  ledRotationDir = OFF;
+  ledRotationState = OFF;
 
   lighState = LIGHT_OFF;
 
@@ -246,7 +328,14 @@ void setup()
   MsTimer2::set(50, timerBrakes_Isr);
   MsTimer2::stop();
 
+  // setup IIC communication
+  Wire.begin(i2cSlaveAddr); // join i2c bus
+  Wire.onReceive(i2cReceive); // register event  
+  Wire.onRequest(i2cRequest); // register request
+
 }
+
+
 void flashTurn( int pin1, int pin2, int state )
 {
   if( state == ON )
@@ -324,24 +413,25 @@ void flashBreakLights( int pinRight, int pinLeft, int state )
 
 
 
-void RotationLight( int direction, int state )
+void switchRotationLight( int direction, int state )
 {  
-  if( state == ON )
+  if( (ledRotationState = state) == ON )
   {
-    ledFlashTurn_Rear = PIN_ROTATION_1;
-    digitalWrite(ledFlashTurn_Rear, HIGH);
-    ledFlash2_Dir = direction;
-    MsTimer2::start();
+    digitalWrite(PIN_ROTATION_1, HIGH);
+    digitalWrite(PIN_ROTATION_2, LOW);
+    digitalWrite(PIN_ROTATION_3, LOW);
+    digitalWrite(PIN_ROTATION_4, LOW);
+    ledRotationLight = PIN_ROTATION_1;
+    ledRotationDir = direction;
   }
   else
   {
-    MsTimer2::stop();
     digitalWrite(PIN_ROTATION_1, LOW);
     digitalWrite(PIN_ROTATION_2, LOW);
     digitalWrite(PIN_ROTATION_3, LOW);
     digitalWrite(PIN_ROTATION_4, LOW);
-    ledFlashTurn_Rear = OFF;
-    ledFlash2_Dir = OFF;
+    ledRotationLight = 0;
+    ledRotationDir = OFF;
   }
 }
 
@@ -399,9 +489,13 @@ Serial.println("All lights off");
   }
 }
 
+// check light functionality
+// remove ifdefs if desired
+//
+void lighTest()
+{
 
-// the loop function runs over and over again forever
-void loop() {
+#ifdef NODEF
 
   delay(1000);
 Serial.println("All lights off");
@@ -458,10 +552,6 @@ Serial.println("Brake lights off");
 flashBreakLights( PIN_RIGHT_BRAKE_REAR, PIN_LEFT_BRAKE_REAR, OFF );
   delay(4000);
 
-
-
-
-#ifdef NODEDEF
 Serial.println("All Front lights off");
   digitalWrite(PIN_RIGHT_LOW_FRONT, LOW);
   digitalWrite(PIN_RIGHT_HIGH_FRONT, LOW);
@@ -517,7 +607,6 @@ Serial.println("Left front turn flash");
   flashTurn( PIN_LEFT_TURN_FRONT, 0, OFF );
 delay(3000);
 
-
 Serial.println("Rear lights on");
   digitalWrite(PIN_LEFT_REAR, HIGH);
   digitalWrite(PIN_RIGHT_REAR, HIGH);
@@ -558,6 +647,17 @@ Serial.println("Rotation counter-clockwise light on");
 Serial.println("Rotation counter-clockwise light off");
   RotationLight( CCLOCKWISE, OFF );
   delay(1000);
-#endif // NODEDEF
+#endif // NODEF
 
 }
+
+
+
+// the loop function runs over and over again forever
+void loop() {
+  lighTest();
+
+  doRotationLight();
+
+}
+
