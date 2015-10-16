@@ -18,6 +18,10 @@
 #include <Wire.h>
 #include <EEPROM.h>
 
+#include "RobotI2C_defs.h"
+#include "RobotI2C_telegrams.h"
+
+
 #define PIN_RIGHT_HIGH_FRONT  12
 #define PIN_RIGHT_TURN_FRONT  13
 #define PIN_LEFT_LOW_FRONT    11
@@ -67,9 +71,6 @@ volatile int ledRotationState = 0;
 
 volatile int lighState;
 
-
-#define I2C_SLAVE_LIGHTS   0x0a
-#define I2C_BUF_SIZE         32
 
 volatile char i2cInBuf[I2C_BUF_SIZE];
 char i2cOutBuf[I2C_BUF_SIZE];
